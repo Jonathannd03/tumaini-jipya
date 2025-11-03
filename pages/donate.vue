@@ -55,80 +55,7 @@
               </div>
             </div>
           </div>
-  
-          <!-- 
-          <div class="mb-12 sm:mb-16">
-            <div class="text-center mb-10 sm:mb-12">
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Aktuelle Spendenmöglichkeiten
-              </h2>
-              <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Sie können uns bereits jetzt auf folgenden Wegen unterstützen
-              </p>
-            </div>
-  
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
-              Bank Transfer 
-              <div class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-200 hover:-translate-y-2">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                  </svg>
-                </div>
-                
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                  Banküberweisung
-                </h3>
-                
-                <div class="space-y-3 text-sm sm:text-base">
-                  <div>
-                    <div class="text-xs sm:text-sm text-gray-500 mb-1">Kontoinhaber</div>
-                    <div class="font-semibold text-gray-900">Tumaini Jipya e.V.</div>
-                  </div>
-                  <div>
-                    <div class="text-xs sm:text-sm text-gray-500 mb-1">IBAN</div>
-                    <div class="font-mono font-semibold text-gray-900 break-all">DE89 3704 0044 0532 0130 00</div>
-                  </div>
-                  <div>
-                    <div class="text-xs sm:text-sm text-gray-500 mb-1">BIC</div>
-                    <div class="font-mono font-semibold text-gray-900">COBADEFFXXX</div>
-                  </div>
-                  <div>
-                    <div class="text-xs sm:text-sm text-gray-500 mb-1">Bank</div>
-                    <div class="font-semibold text-gray-900">Commerzbank</div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-200 hover:-translate-y-2">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                </div>
-                
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                  Persönlicher Kontakt
-                </h3>
-                
-                <p class="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
-                  Kontaktieren Sie uns für weitere Informationen zu Spendenmöglichkeiten oder bei Fragen zur Mittelverwendung.
-                </p>
-                
-                <a 
-                  href="/contact" 
-                  class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold text-sm sm:text-base group-hover:gap-3 transition-all"
-                >
-                  <span>Kontakt aufnehmen</span>
-                  <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div> -->
-  
-  
+
           <div class="mb-12 sm:mb-16">
             <div class="text-center mb-10 sm:mb-12">
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -198,28 +125,22 @@
                 Erfahren Sie als Erste/r, wenn die Online-Spendenfunktion verfügbar ist und erhalten Sie Updates zu unseren Projekten
               </p>
               
-              <a 
-                href="/contact" 
+              <NuxtLink
+                to="/contact"
                 class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
                 <span>Kontaktieren Sie uns</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
       </div>
     </div>
   </template>
-  
+
   <script setup>
-  // Page meta (for Nuxt)
-  // useHead({
-  //   title: 'Spenden - Tumaini Jipya e.V.',
-  //   meta: [
-  //     { name: 'description', content: 'Unterstützen Sie Tumaini Jipya e.V. mit Ihrer Spende' }
-  //   ]
-  // });
+  // No additional script needed
   </script>

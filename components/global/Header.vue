@@ -12,14 +12,24 @@
         </NuxtLink>
         
         <!-- Desktop Navigation -->
-        <Navigation :links="navLinks" class="hidden lg:block" />
+        <nav class="hidden lg:block">
+          <ul class="flex items-center gap-8">
+            <li v-for="link in NAVIGATION_LINKS" :key="link.href">
+              <NuxtLink
+                :to="link.href"
+                class="text-gray-700 hover:text-teal-700 font-medium transition-colors"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
         
         <!-- Action Buttons -->
         <div class="flex items-center gap-2 sm:gap-3">
           <!-- Desktop Donate Button -->
-          <NuxtLink to="/donate" 
+          <NuxtLink to="/donate"
             class="hidden sm:inline-flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold rounded-lg transition-all duration-300 text-sm lg:text-base"
-            @click="toggleDonateModal"
           >
             <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -68,22 +78,22 @@
     >
       <nav class="container mx-auto px-4 sm:px-6 py-4">
         <ul class="space-y-2">
-          <li v-for="link in navLinks" :key="link.href">
-            <a 
-              :href="link.href" 
+          <li v-for="link in NAVIGATION_LINKS" :key="link.href">
+            <NuxtLink
+              :to="link.href"
               class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg font-medium transition-colors"
               @click="mobileMenuOpen = false"
             >
               {{ link.label }}
-            </a>
+            </NuxtLink>
           </li>
         </ul>
         
         <!-- Mobile Menu Actions -->
         <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
-          <NuxtLink to="/donate" 
+          <NuxtLink to="/donate"
             class="w-full flex items-center justify-center gap-2 px-4 py-3 border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold rounded-lg transition-all duration-300"
-            @click="toggleDonateModal(); mobileMenuOpen = false"
+            @click="mobileMenuOpen = false"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -91,9 +101,9 @@
             Spenden
           </NuxtLink>
           
-          <NuxtLink to="/membership" 
+          <NuxtLink to="/membership"
             class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            @click="navigateTo('/membership'); mobileMenuOpen = false"
+            @click="mobileMenuOpen = false"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -109,23 +119,8 @@
 <script setup>
 import { ref } from 'vue';
 
+const { NAVIGATION_LINKS, ORGANIZATION } = useConstants();
 const mobileMenuOpen = ref(false);
-
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Über uns', href: '/about-us' },
-  { label: 'Projekte', href: '/projects' },
-  { label: 'Mitgliedschaft', href: '/membership' },
-  { label: 'Kontakt', href: '/contact' }
-];
-
-const navigateTo = (path) => {
-  console.log('Navigate to:', path);
-};
-
-const toggleDonateModal = () => {
-  console.log('Toggle donate modal');
-};
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;

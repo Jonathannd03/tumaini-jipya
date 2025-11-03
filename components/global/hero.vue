@@ -37,9 +37,8 @@
             Unsere Projekte entdecken
           </NuxtLink>
           
-          <NuxtLink to="/donate" 
+          <NuxtLink to="/donate"
             class="px-8 py-4 border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-lg transition-all duration-300 text-lg"
-            @click="navigateTo('/membership')"
           >
             Jetzt unterstützen
           </NuxtLink>
@@ -66,8 +65,5 @@
 </template>
 
 <script setup>
-const navigateTo = (path) => {
-  // Your navigation logic here
-  console.log('Navigate to:', path);
-};
+// No additional script needed
 </script>

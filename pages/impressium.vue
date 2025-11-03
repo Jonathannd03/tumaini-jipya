@@ -209,27 +209,21 @@
   
           <!-- Back to Home CTA -->
           <div class="mt-10 sm:mt-12 text-center">
-            <a 
-              href="/" 
+            <NuxtLink
+              to="/"
               class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
               </svg>
               <span>Zurück zur Startseite</span>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </div>
   </template>
-  
+
   <script setup>
-  // Page meta (for Nuxt)
-  // useHead({
-  //   title: 'Impressum - Tumaini Jipya e.V.',
-  //   meta: [
-  //     { name: 'description', content: 'Impressum und rechtliche Informationen von Tumaini Jipya e.V.' }
-  //   ]
-  // });
+  // No additional script needed
   </script>

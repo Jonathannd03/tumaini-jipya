@@ -248,15 +248,15 @@
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="/contact" 
+              <NuxtLink
+                to="/contact"
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
                 <span>Kontakt aufnehmen</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
-              </a>
+              </NuxtLink>
               
               <a 
                 href="mailto:info@tumaini-jipya.org" 
@@ -276,11 +276,5 @@
 </template>
 
 <script setup>
-// Page meta (for Nuxt)
-// useHead({
-//   title: 'Mitgliedschaft - Tumaini Jipya e.V.',
-//   meta: [
-//     { name: 'description', content: 'Werden Sie Mitglied bei Tumaini Jipya e.V. und unterstützen Sie unsere Mission' }
-//   ]
-// });
+// No additional script needed
 </script>
