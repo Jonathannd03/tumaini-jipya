@@ -5,14 +5,14 @@
         <!-- Organization Info -->
         <div class="sm:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/images/logo.png" alt="Logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
+            <img :src="ORGANIZATION.logoPath" alt="Logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
             <div class="flex flex-col">
-              <span class="text-lg sm:text-xl font-bold">Tumaini Jipya</span>
+              <span class="text-lg sm:text-xl font-bold">{{ ORGANIZATION.fullName }}</span>
               <span class="text-xs text-gray-400">e.V.</span>
             </div>
           </div>
           <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
-            Gemeinsam für humanitäre Hilfe, Klimaschutz und Bildung in Krisenregionen.
+            {{ ORGANIZATION.tagline }}
           </p>
           
           <!-- Social Icons -->
@@ -51,29 +51,11 @@
         <div>
           <h3 class="font-bold text-lg mb-4 text-teal-300">Quick Links</h3>
           <ul class="space-y-3">
-            <li>
-              <a href="/about-us" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
+            <li v-for="link in footerLinks" :key="link.href">
+              <NuxtLink :to="link.href" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
                 <span class="w-1.5 h-1.5 bg-teal-400 rounded-full group-hover:scale-150 transition-transform"></span>
-                Über uns
-              </a>
-            </li>
-            <li>
-              <a href="/projects" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
-                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full group-hover:scale-150 transition-transform"></span>
-                Projekte
-              </a>
-            </li>
-            <li>
-              <a href="/membership" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
-                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full group-hover:scale-150 transition-transform"></span>
-                Mitglied werden
-              </a>
-            </li>
-            <li>
-              <a href="/contact" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
-                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full group-hover:scale-150 transition-transform"></span>
-                Kontakt
-              </a>
+                {{ link.label }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -100,8 +82,8 @@
               <svg class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              <a href="mailto:info@tumaini-jipya.org" class="hover:text-teal-300 transition-colors break-all">
-                info@tumaini-jipya.org
+              <a :href="`mailto:${CONTACT_INFO.email}`" class="hover:text-teal-300 transition-colors break-all">
+                {{ CONTACT_INFO.email }}
               </a>
             </li>
             <li class="flex items-start gap-3 text-gray-300">
@@ -110,8 +92,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
               <span>
-                Kremerstraße 53<br />
-                47051 Duisburg
+                {{ CONTACT_INFO.address.street }}<br />
+                {{ CONTACT_INFO.address.city }}
               </span>
             </li>
           </ul>
@@ -122,7 +104,7 @@
       <div class="border-t border-gray-700/50 mt-8 sm:mt-12 pt-6 sm:pt-8">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p class="text-center sm:text-left">
-            &copy; {{ new Date().getFullYear() }} Tumaini Jipya e.V. · Alle Rechte vorbehalten.
+            &copy; {{ new Date().getFullYear() }} {{ ORGANIZATION.name }} · Alle Rechte vorbehalten.
           </p>
           <div class="flex items-center gap-2">
             <span class="text-xs">Gemeinnützig anerkannt</span>
@@ -137,5 +119,13 @@
 </template>
 
 <script setup>
-// No additional script needed
+const { NAVIGATION_LINKS, SOCIAL_LINKS, CONTACT_INFO, ORGANIZATION } = useConstants();
+
+// Footer navigation (subset of main navigation)
+const footerLinks = [
+  { label: 'Über uns', href: '/about-us' },
+  { label: 'Projekte', href: '/projects' },
+  { label: 'Mitglied werden', href: '/membership' },
+  { label: 'Kontakt', href: '/contact' }
+];
 </script>

@@ -208,28 +208,22 @@
               <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Wir suchen engagierte Menschen, die mit uns gemeinsam Gutes bewirken möchten.
               </p>
-              <a 
-                href="/membership" 
+              <NuxtLink
+                to="/membership"
                 class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
                 <span>Jetzt Mitglied werden</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
       </section>
     </div>
   </template>
-  
+
   <script setup>
-  // Page meta (for Nuxt)
-  // useHead({
-  //   title: 'Unser Team - Tumaini Jipya e.V.',
-  //   meta: [
-  //     { name: 'description', content: 'Lernen Sie den Vorstand und das Team von Tumaini Jipya e.V. kennen' }
-  //   ]
-  // });
+  // No additional script needed
   </script>
