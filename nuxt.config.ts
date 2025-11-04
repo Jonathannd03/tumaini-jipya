@@ -29,11 +29,6 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "vercel",
-    prerender: {
-      crawlLinks: true,
-      routes: ["/"],
-      failOnError: false,
-    },
   },
   css: ["~/assets/css/tailwind.css"],
   postcss: {
