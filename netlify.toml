@@ -5,10 +5,10 @@
   # Output directory for static files
   publish = ".output/public"
 
-  # Set Node version to ensure compatibility
-  environment = { NODE_VERSION = "20" }
-
 [build.environment]
+  # Set Node version to ensure compatibility
+  NODE_VERSION = "20"
+
   # Increase Node memory limit for build process
   NODE_OPTIONS = "--max-old-space-size=4096"
 
