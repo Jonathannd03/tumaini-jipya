@@ -21,6 +21,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    preset: "netlify",
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
   css: ["~/assets/css/tailwind.css"],
   postcss: {
     plugins: {
