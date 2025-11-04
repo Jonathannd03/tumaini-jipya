@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n"],
 
+  runtimeConfig: {
+    // Private keys that are only available on the server
+    emailUser: process.env.EMAIL_USER,
+    emailPassword: process.env.EMAIL_PASSWORD,
+  },
+
   css: ["~/assets/css/tailwind.css"],
 
   postcss: {
