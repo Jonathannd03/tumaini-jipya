@@ -5,16 +5,15 @@
           <!-- Left Side - Contact Info -->
           <div>
             <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-6">
-              Kontakt
+              {{ $t('contact.badge') }}
             </div>
-            
+
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Wir freuen uns von Ihnen zu hören
+              {{ $t('contact.title') }}
             </h2>
-            
+
             <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-              Haben Sie Fragen, Anregungen oder möchten Sie mit uns zusammenarbeiten? 
-              Zögern Sie nicht, uns zu kontaktieren.
+              {{ $t('contact.description') }}
             </p>
   
             <!-- Contact Methods -->
@@ -28,21 +27,21 @@
                   <component :is="contact.icon" />
                 </div>
                 <div>
-                  <h3 class="text-lg font-bold text-gray-900 mb-1">{{ contact.title }}</h3>
-                  <a 
-                    :href="contact.link" 
+                  <h3 class="text-lg font-bold text-gray-900 mb-1">{{ $t(contact.titleKey) }}</h3>
+                  <a
+                    :href="contact.link"
                     class="text-gray-600 hover:text-blue-600 transition-colors"
                   >
                     {{ contact.value }}
                   </a>
-                  <p v-if="contact.subtext" class="text-sm text-gray-500 mt-1">{{ contact.subtext }}</p>
+                  <p v-if="contact.subtextKey" class="text-sm text-gray-500 mt-1">{{ $t(contact.subtextKey) }}</p>
                 </div>
               </div>
             </div>
   
             <!-- Social Media -->
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-4">Folgen Sie uns</h3>
+              <h3 class="text-lg font-bold text-gray-900 mb-4">{{ $t('contact.social') }}</h3>
               <div class="flex gap-3">
                 <a 
                   v-for="(social, idx) in socialLinks" 
@@ -59,13 +58,13 @@
   
           <!-- Right Side - Contact Form -->
           <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Nachricht senden</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ $t('contact.form.send') }}</h3>
             
             <form @submit.prevent="handleSubmit" class="space-y-6">
               <!-- Name -->
               <div>
                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Name *
+                  {{ $t('contact.form.name') }} *
                 </label>
                 <input 
                   type="text" 
@@ -80,7 +79,7 @@
               <!-- Email -->
               <div>
                 <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                  E-Mail *
+                  {{ $t('contact.form.email') }} *
                 </label>
                 <input 
                   type="email" 
@@ -95,7 +94,7 @@
               <!-- Phone -->
               <div>
                 <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Telefon (optional)
+                  {{ $t('contact.form.phone') }}
                 </label>
                 <input 
                   type="tel" 
@@ -109,28 +108,28 @@
               <!-- Subject -->
               <div>
                 <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Betreff *
+                  {{ $t('contact.form.subject') }} *
                 </label>
-                <select 
+                <select
                   id="subject"
                   v-model="formData.subject"
                   required
                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 >
-                  <option value="">Bitte wählen...</option>
-                  <option value="spende">Spende</option>
-                  <option value="mitgliedschaft">Mitgliedschaft</option>
-                  <option value="ehrenamt">Ehrenamtliche Mitarbeit</option>
-                  <option value="partnerschaft">Partnerschaft</option>
-                  <option value="allgemein">Allgemeine Anfrage</option>
-                  <option value="sonstiges">Sonstiges</option>
+                  <option value="">{{ $t('contact.form.subjects.select') }}</option>
+                  <option value="spende">{{ $t('contact.form.subjects.donation') }}</option>
+                  <option value="mitgliedschaft">{{ $t('contact.form.subjects.membership') }}</option>
+                  <option value="ehrenamt">{{ $t('contact.form.subjects.volunteer') }}</option>
+                  <option value="partnerschaft">{{ $t('contact.form.subjects.partnership') }}</option>
+                  <option value="allgemein">{{ $t('contact.form.subjects.general') }}</option>
+                  <option value="sonstiges">{{ $t('contact.form.subjects.other') }}</option>
                 </select>
               </div>
   
               <!-- Message -->
               <div>
                 <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Nachricht *
+                  {{ $t('contact.form.message') }} *
                 </label>
                 <textarea 
                   id="message"
@@ -152,8 +151,7 @@
                   class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 />
                 <label for="privacy" class="text-sm text-gray-600">
-                  Ich habe die <NuxtLink to="/datenschutz" class="text-blue-600 hover:underline">Datenschutzerklärung</NuxtLink> 
-                  zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zu. *
+                  {{ $t('contact.form.privacy') }}
                 </label>
               </div>
   
@@ -163,19 +161,19 @@
                 :disabled="isSubmitting"
                 class="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                <span v-if="!isSubmitting">Nachricht senden</span>
+                <span v-if="!isSubmitting">{{ $t('contact.form.send') }}</span>
                 <span v-else class="flex items-center justify-center gap-2">
                   <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Wird gesendet...
+                  {{ $t('contact.form.sending') }}
                 </span>
               </button>
   
               <!-- Success Message -->
               <div v-if="submitSuccess" class="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-                ✓ Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen.
+                ✓ {{ $t('contact.form.success') }}
               </div>
             </form>
           </div>
@@ -186,7 +184,8 @@
   
   <script setup>
   import { h, ref, reactive } from 'vue';
-  
+
+  const { CONTACT_INFO, ORGANIZATION } = useConstants();
   const isSubmitting = ref(false);
   const submitSuccess = ref(false);
   
@@ -201,30 +200,30 @@
   
   const contactMethods = [
     {
-      title: 'E-Mail',
-      value: 'info@tumainijipya.de',
-      link: 'mailto:info@tumainijipya.de',
-      subtext: 'Wir antworten innerhalb von 24 Stunden',
+      titleKey: 'contact.info.email',
+      value: CONTACT_INFO.email,
+      link: `mailto:${CONTACT_INFO.email}`,
+      subtextKey: 'contact.info.emailResponse',
       color: 'from-blue-500 to-blue-600',
       icon: () => h('svg', { class: 'w-6 h-6', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
         h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' })
       ])
     },
     {
-      title: 'Telefon',
+      titleKey: 'contact.info.phone',
       value: '+49 (0) 123 456 789',
       link: 'tel:+49123456789',
-      subtext: 'Mo-Fr: 9:00 - 17:00 Uhr',
+      subtextKey: 'contact.info.phoneHours',
       color: 'from-green-500 to-green-600',
       icon: () => h('svg', { class: 'w-6 h-6', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
         h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' })
       ])
     },
     {
-      title: 'Adresse',
-      value: 'Tumaini Jipya e.V., Duisburg',
+      titleKey: 'contact.info.address',
+      value: `${ORGANIZATION.name}, ${CONTACT_INFO.address.city}`,
       link: '#',
-      subtext: 'Besuchen Sie uns nach Vereinbarung',
+      subtextKey: 'contact.info.visitByAppointment',
       color: 'from-purple-500 to-purple-600',
       icon: () => h('svg', { class: 'w-6 h-6', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
         h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }),

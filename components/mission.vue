@@ -25,7 +25,7 @@
       <!-- Mission Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         <div
-          v-for="(area, index) in MISSION_AREAS.value"
+          v-for="(area, index) in MISSION_AREAS"
           :key="area.id"
           class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-2"
           :class="{

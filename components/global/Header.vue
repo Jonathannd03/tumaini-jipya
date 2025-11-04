@@ -4,9 +4,9 @@
       <div class="flex justify-between items-center py-3 sm:py-4">
         <!-- Logo Section -->
         <NuxtLink to="/" class="flex items-center gap-2 sm:gap-3">
-          <img src="/images/logo.png" alt="Tumaini Jipya Logo" class="h-50 w-10 sm:h-12 sm:w-12 object-contain">
+          <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="h-50 w-10 sm:h-12 sm:w-12 object-contain">
           <div class="flex flex-col">
-            <span class="text-lg sm:text-xl font-bold text-teal-700 leading-tight">Tumaini Jipya</span>
+            <span class="text-lg sm:text-xl font-bold text-teal-700 leading-tight">{{ ORGANIZATION.fullName }}</span>
             <span class="text-xs text-gray-700 font-medium">e.V.</span>
           </div>
         </NuxtLink>
@@ -14,7 +14,7 @@
         <!-- Desktop Navigation - visible on tablets and up -->
         <nav class="hidden md:block">
           <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-            <li v-for="link in NAVIGATION_LINKS.value" :key="link.href">
+            <li v-for="link in NAVIGATION_LINKS" :key="link.href">
               <NuxtLink
                 :to="link.href"
                 class="text-gray-700 hover:text-teal-700 font-medium transition-colors text-sm lg:text-base"
@@ -29,7 +29,7 @@
         <div class="flex items-center gap-2 sm:gap-3">
           <!-- Language Switcher - visible on all screen sizes -->
           <div>
-            <LanguageSwitcher />
+            <UiLanguageSwitcher />
           </div>
 
           <!-- Desktop Donate Button -->
@@ -83,7 +83,7 @@
     >
       <nav class="container mx-auto px-4 sm:px-6 py-4">
         <ul class="space-y-2">
-          <li v-for="link in NAVIGATION_LINKS.value" :key="link.href">
+          <li v-for="link in NAVIGATION_LINKS" :key="link.href">
             <NuxtLink
               :to="link.href"
               class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg font-medium transition-colors"
@@ -118,7 +118,7 @@
 
           <!-- Mobile Language Switcher -->
           <div class="flex justify-center pt-2">
-            <LanguageSwitcher />
+            <UiLanguageSwitcher />
           </div>
         </div>
       </nav>

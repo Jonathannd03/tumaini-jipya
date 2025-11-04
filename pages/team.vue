@@ -14,14 +14,14 @@
               <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
               </svg>
-              <span class="text-sm font-medium">Unser Team</span>
+              <span class="text-sm font-medium">{{ $t('team.badge') }}</span>
             </div>
-            
+
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              Das Team von <span class="text-emerald-300">Tumaini Jipya e.V.</span>
+              {{ $t('team.title') }} <span class="text-emerald-300">{{ $t('team.titleHighlight') }}</span>
             </h1>
             <p class="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
-              Engagierte Menschen, die gemeinsam für eine bessere Zukunft arbeiten
+              {{ $t('team.description') }}
             </p>
           </div>
         </div>
@@ -35,13 +35,13 @@
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              Gemäß § 8 der Vereinssatzung
+              {{ $t('team.board.badge') }}
             </div>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Der Vorstand
+              {{ $t('team.board.title') }}
             </h2>
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Der Vorstand führt die laufenden Geschäfte des Vereins und vertritt ihn nach außen
+              {{ $t('team.board.description') }}
             </p>
           </div>
   
@@ -58,10 +58,10 @@
                   [Name]
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
-                  Vorsitzende/r
+                  {{ $t('team.board.chair') }}
                 </p>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Vertretungsberechtigt gemäß § 26 BGB
+                  {{ $t('team.board.representativeAccording') }}
                 </p>
               </div>
             </div>
@@ -78,10 +78,10 @@
                   [Name]
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
-                  Stellvertreter/in
+                  {{ $t('team.board.viceChair') }}
                 </p>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Vertretungsberechtigt gemäß § 26 BGB
+                  {{ $t('team.board.representativeAccording') }}
                 </p>
               </div>
             </div>
@@ -98,10 +98,10 @@
                   [Name]
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
-                  Schatzmeister/in
+                  {{ $t('team.board.treasurer') }}
                 </p>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Verwaltung des Vereinsvermögens
+                  {{ $t('team.board.treasuryManagement') }}
                 </p>
               </div>
             </div>
@@ -116,12 +116,12 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Amtszeit und Aufgaben</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('team.board.termInfo.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
-                  Die Amtszeit des Vorstands beträgt drei Jahre, eine Wiederwahl ist zulässig. Der Vorstand führt die laufenden Geschäfte des Vereins, verwaltet das Vereinsvermögen und beruft die Mitgliederversammlung ein.
+                  {{ $t('team.board.termInfo.description') }}
                 </p>
                 <p class="text-xs sm:text-sm text-gray-600 italic">
-                  Gemäß § 8 Absatz 2 und 3 der Vereinssatzung
+                  {{ $t('team.board.termInfo.statute') }}
                 </p>
               </div>
             </div>
@@ -134,10 +134,10 @@
         <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div class="text-center mb-10 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Mitgliederversammlung
+              {{ $t('team.assembly.title') }}
             </h2>
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Das höchste Organ des Vereins
+              {{ $t('team.assembly.description') }}
             </p>
           </div>
   
@@ -151,12 +151,12 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Ordentliche Versammlung</h3>
-                  <p class="text-sm sm:text-base text-gray-600">Findet einmal jährlich statt</p>
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('team.assembly.regular.title') }}</h3>
+                  <p class="text-sm sm:text-base text-gray-600">{{ $t('team.assembly.regular.description') }}</p>
                 </div>
               </div>
               <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
-                Die Einladung erfolgt spätestens zwei Monate vor dem Termin der Mitgliederversammlung, jeweils schriftlich.
+                {{ $t('team.assembly.regular.detail') }}
               </p>
               <p class="text-xs sm:text-sm text-gray-500 mt-3 italic">§ 9 Absatz 1</p>
             </div>
@@ -170,8 +170,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Beschlussfassung</h3>
-                  <p class="text-sm sm:text-base text-gray-600">Mehrheitsregeln</p>
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('team.assembly.voting.title') }}</h3>
+                  <p class="text-sm sm:text-base text-gray-600">{{ $t('team.assembly.voting.description') }}</p>
                 </div>
               </div>
               <ul class="space-y-2 text-sm sm:text-base text-gray-700">
@@ -179,13 +179,13 @@
                   <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Einfache Mehrheit für normale Beschlüsse</span>
+                  <span>{{ $t('team.assembly.voting.simpleMajority') }}</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Zweidrittelmehrheit für Satzungsänderungen</span>
+                  <span>{{ $t('team.assembly.voting.twoThirdsMajority') }}</span>
                 </li>
               </ul>
               <p class="text-xs sm:text-sm text-gray-500 mt-3 italic">§ 9 Absatz 2</p>
@@ -203,16 +203,16 @@
             
             <div class="relative">
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-                Werden Sie Teil unseres Teams
+                {{ $t('team.joinTeam') }}
               </h2>
               <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Wir suchen engagierte Menschen, die mit uns gemeinsam Gutes bewirken möchten.
+                {{ $t('team.joinDescription') }}
               </p>
               <NuxtLink
                 to="/membership"
                 class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
-                <span>Jetzt Mitglied werden</span>
+                <span>{{ $t('team.becomeMember') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -225,5 +225,5 @@
   </template>
 
   <script setup>
-  // No additional script needed
+  const { ORGANIZATION } = useConstants();
   </script>

@@ -8,13 +8,13 @@
       <!-- Section Header -->
       <div class="text-center mb-12 sm:mb-14 lg:mb-16">
         <div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-4 sm:mb-6">
-          Aktuelle Projekte
+          {{ $t('projects.badge') }}
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-          Wo wir <span class="text-teal-600">helfen</span>
+          {{ $t('projects.title') }} <span class="text-teal-600">{{ $t('projects.titleHighlight') }}</span>
         </h2>
         <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-          Unsere laufenden Projekte machen einen echten Unterschied im Leben der Menschen
+          {{ $t('projects.description') }}
         </p>
       </div>
 
@@ -30,23 +30,23 @@
               </svg>
             </div>
             <div class="absolute top-3 right-3 sm:top-4 sm:right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-900">
-              In Plannung
+              {{ $t('projects.inPlanning') }}
             </div>
           </div>
 
           <!-- Project Content -->
           <div class="p-5 sm:p-6">
             <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
-              Bildungszentrum für Kinder
+              {{ $t('projects.educationCenter.title') }}
             </h3>
             <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
-              Aufbau eines Bildungszentrums mit Nachhilfe und Sprachförderung für 150 geflüchtete Kinder.
+              {{ $t('projects.educationCenter.description') }}
             </p>
 
             <!-- Progress Bar -->
             <div class="mb-4">
               <div class="flex justify-between text-xs sm:text-sm mb-2">
-                <span class="text-gray-600">Fortschritt</span>
+                <span class="text-gray-600">{{ $t('projects.progress') }}</span>
                 <span class="font-semibold text-gray-900">25%</span>
               </div>
               <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -57,11 +57,11 @@
             <!-- Project Stats -->
             <div class="flex items-center justify-between pt-4 border-t border-gray-100">
               <div>
-                <div class="text-xs text-gray-500 mb-1">Begünstigte</div>
+                <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">150+</div>
               </div>
               <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>Details</span>
+                <span>{{ $t('projects.details') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -79,21 +79,21 @@
               </svg>
             </div>
             <div class="absolute top-3 right-3 sm:top-4 sm:right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-900">
-              In Planung
+              {{ $t('projects.inPlanning') }}
             </div>
           </div>
 
           <div class="p-5 sm:p-6">
             <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
-              Klimaschutz Initiative
+              {{ $t('projects.climateInitiative.title') }}
             </h3>
             <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
-              Pflanzung von 1000 Bäumen und Installation von Solaranlagen in lokalen Gemeinden.
+              {{ $t('projects.climateInitiative.description') }}
             </p>
 
             <div class="mb-4">
               <div class="flex justify-between text-xs sm:text-sm mb-2">
-                <span class="text-gray-600">Fortschritt</span>
+                <span class="text-gray-600">{{ $t('projects.progress') }}</span>
                 <span class="font-semibold text-gray-900">25%</span>
               </div>
               <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -103,11 +103,11 @@
 
             <div class="flex items-center justify-between pt-4 border-t border-gray-100">
               <div>
-                <div class="text-xs text-gray-500 mb-1">Begünstigte</div>
+                <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">500+</div>
               </div>
               <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>Details</span>
+                <span>{{ $t('projects.details') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -125,21 +125,21 @@
               </svg>
             </div>
             <div class="absolute top-3 right-3 sm:top-4 sm:right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-900">
-              In Plannung
+              {{ $t('projects.inPlanning') }}
             </div>
           </div>
 
           <div class="p-5 sm:p-6">
             <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
-              Notfall-Hilfspaket
+              {{ $t('projects.emergencyAid.title') }}
             </h3>
             <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
-              Verteilung von Nahrungsmitteln, Kleidung und Medikamenten an bedürftige Familien.
+              {{ $t('projects.emergencyAid.description') }}
             </p>
 
             <div class="mb-4">
               <div class="flex justify-between text-xs sm:text-sm mb-2">
-                <span class="text-gray-600">Fortschritt</span>
+                <span class="text-gray-600">{{ $t('projects.progress') }}</span>
                 <span class="font-semibold text-gray-900">25%</span>
               </div>
               <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -149,11 +149,11 @@
 
             <div class="flex items-center justify-between pt-4 border-t border-gray-100">
               <div>
-                <div class="text-xs text-gray-500 mb-1">Begünstigte</div>
+                <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">300+</div>
               </div>
               <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>Details</span>
+                <span>{{ $t('projects.details') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -166,7 +166,7 @@
       <!-- View All CTA -->
       <div class="mt-12 sm:mt-14 lg:mt-16 text-center">
         <a href="/projekte" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gray-900 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg hover:bg-gray-800 transform hover:-translate-y-1 transition-all duration-300">
-          <span>Alle Projekte ansehen</span>
+          <span>{{ $t('projects.viewAll') }}</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
