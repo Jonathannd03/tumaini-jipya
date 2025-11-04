@@ -35,8 +35,11 @@ npm run preview
 - **Framework:** Nuxt 3 (Vue 3)
 - **Styling:** TailwindCSS with custom theme
 - **Rendering:** Static site generation (SSR disabled)
+- **Internationalization:** @nuxtjs/i18n (German, English, French)
+- **Email Service:** Resend API
 - **Font:** Inter (Google Fonts)
 - **Icons:** Font Awesome 6 + inline SVG icons
+- **Deployment:** Netlify
 
 ### Project Structure
 
@@ -66,7 +69,15 @@ npm run preview
 │   ├── HeroSection.vue
 │   └── ContactForm.vue
 ├── composables/        # Vue composables
-│   └── ui.ts
+│   ├── ui.ts
+│   └── useConstants.ts # Centralized constants (ORGANIZATION, NAVIGATION_LINKS, etc.)
+├── locales/            # i18n translation files
+│   ├── de.ts           # German translations
+│   ├── en.ts           # English translations
+│   └── fr.ts           # French translations
+├── server/             # Server-side API endpoints
+│   └── api/
+│       └── contact.post.ts  # Contact form email handler
 ├── stores/             # State management (if needed)
 └── assets/css/         # Global styles
 ```
@@ -153,8 +164,23 @@ Pages typically follow this pattern:
 **nuxt.config.ts:**
 - SSR disabled (`ssr: false`) for static deployment
 - TailwindCSS module configured
+- i18n module with 3 languages (de, en, fr)
+- i18n strategy: `no_prefix` with cookie-based persistence
+- Runtime config for Resend API key
 - Custom head meta for SEO (German keywords)
 - Logo path: `/images/logo.png`
+
+**.env Configuration:**
+- `RESEND_API_KEY` - Email service API key (required for contact form)
+- See `.env.example` for template
+
+**netlify.toml:**
+- Build command: `npm run generate`
+- Publish directory: `.output/public`
+- Node version: 20
+- Environment: Node memory limit, npm flags for optional dependencies
+- SPA redirects configured
+- Security and caching headers
 
 **Color Scheme:**
 - Primary brand: Teal/Emerald (`teal-600`, `emerald-600`)
@@ -162,9 +188,31 @@ Pages typically follow this pattern:
 - Climate: Green/Emerald gradient
 - Education: Blue/Indigo gradient
 
+## Internationalization (i18n)
+
+The website supports three languages:
+- **German (de)** - Default language
+- **English (en)**
+- **French (fr)**
+
+**Implementation:**
+- Language switcher in header (desktop and mobile)
+- Cookie-based language persistence (`i18n_locale`)
+- All content uses translation keys with `$t()` function
+- Translation files in `locales/` directory
+
+**Usage Example:**
+```vue
+<h1>{{ $t('home.title') }}</h1>
+<p>{{ $t('home.description') }}</p>
+```
+
+**Component Naming:**
+- Language switcher: `<UiLanguageSwitcher />` (auto-imported from `components/ui/LanguageSwitcher.vue`)
+
 ## Content Guidelines
 
-**Language:** All content is in German. Maintain German language conventions:
+**Languages:** Content available in German, English, and French. Maintain language conventions:
 - Formal address when appropriate
 - Compound words (e.g., "Klimaschutz", "Bildungsförderung")
 - Proper use of umlauts (ä, ö, ü) and ß
@@ -211,8 +259,76 @@ grid-cols-1 md:grid-cols-2 lg:grid-cols-3
 ### SVG Icons:
 Inline SVG icons are preferred over Font Awesome for custom styling. Use Heroicons-style SVGs with stroke-based designs for consistency.
 
+## Contact Form & Email Functionality
+
+The contact form (`pages/contact.vue`) includes:
+- **Client-side validation** with real-time error messages
+- **Server-side email sending** via Resend API
+- **Form fields:** Name, Email, Phone (optional), Subject, Message, Privacy checkbox
+- **Validation rules:**
+  - Name: Required, min 2 characters
+  - Email: Required, valid email format
+  - Subject: Required selection
+  - Message: Required, min 10 characters
+  - Privacy: Must be checked
+
+**API Endpoint:** `server/api/contact.post.ts`
+- Validates form data
+- Sends email to: ndingajonathan96@gmail.com
+- Uses Resend service
+- Returns success/error response
+
+**Setup Required:**
+1. Sign up at https://resend.com (free tier: 100 emails/day)
+2. Get API key from dashboard
+3. Add to `.env`: `RESEND_API_KEY=re_xxxxx`
+4. For production: Add to Netlify environment variables
+
+See `EMAIL_SETUP.md` for detailed setup instructions.
+
+## Centralized Constants
+
+**Location:** `composables/useConstants.ts`
+
+Provides:
+- `ORGANIZATION` - Organization details (name, fullName, logoPath)
+- `NAVIGATION_LINKS` - Site navigation links
+- `MISSION_AREAS` - Mission cards data
+- `CONTACT_INFO` - Contact information
+- `SOCIAL_LINKS` - Social media links
+
+**Usage:**
+```js
+const { ORGANIZATION, NAVIGATION_LINKS } = useConstants();
+```
+
+**Note:** Use these constants instead of hardcoding values. In templates, refs are auto-unwrapped (no `.value` needed).
+
+## Deployment (Netlify)
+
+**Configuration Files:**
+- `netlify.toml` - Build settings, redirects, headers
+- `.npmrc` - npm configuration (skip optional dependencies)
+- `package.json` - Build scripts
+
+**Environment Variables (Netlify Dashboard):**
+- `RESEND_API_KEY` - Email service API key
+
+**Common Deployment Issues:**
+- ❌ Native binding errors (oxc-parser) → Fixed by skipping optional dependencies
+- ❌ Invalid postinstall scripts → Use `nuxt prepare` only
+- ❌ Build script issues → Use `npm run generate` for static generation
+
+**Build Process:**
+1. `npm install` (runs `nuxt prepare` postinstall)
+2. `npm run generate` (generates static site)
+3. Deploy `.output/public` directory
+
 ## Important Paths
 
-- Logo: `/images/logo.png`
+- Logo: `/images/logo.png` (moved to `public/images/logo.png`)
 - Global styles: `~/assets/css/main.css`
 - Font imports: Google Fonts (Inter) and Font Awesome CDN (configured in `nuxt.config.ts`)
+- Translation files: `locales/*.ts`
+- Environment template: `.env.example`
+- Email setup docs: `EMAIL_SETUP.md`
