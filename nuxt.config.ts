@@ -3,6 +3,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-09-12",
   ssr: false,
+  target: "static",
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n"],
 
@@ -10,9 +11,7 @@ export default defineNuxtConfig({
     // Private keys that are only available on the server
     resendApiKey: process.env.RESEND_API_KEY,
   },
-
   css: ["~/assets/css/tailwind.css"],
-
   postcss: {
     plugins: {
       tailwindcss: {},
