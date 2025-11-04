@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY,
   },
   experimental: {
+    payloadExtraction: false,
+    renderJsonPayloads: true,
     typedPages: false,
   },
   vite: {
@@ -25,6 +27,7 @@ export default defineNuxtConfig({
     preset: "netlify",
     prerender: {
       crawlLinks: true,
+      routes: ["/"],
       failOnError: false,
     },
   },

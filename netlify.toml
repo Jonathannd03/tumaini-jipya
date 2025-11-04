@@ -1,38 +1,23 @@
 [build]
-  # Build command for Nuxt 3 static site
   command = "npm run generate"
-
-  # Output directory for static files
   publish = ".output/public"
 
 [build.environment]
-  # Set Node version to ensure compatibility
   NODE_VERSION = "20"
-
-  # Increase Node memory limit for build process
-  NODE_OPTIONS = "--max-old-space-size=4096"
-
-  # npm install flags
   NPM_FLAGS = "--legacy-peer-deps"
 
-  # Disable prepare/postinstall scripts during install if needed
-  # SKIP_PREPARE = "true"
-
-# Redirects for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
 
-# Headers for security and caching
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
 
 [[headers]]
   for = "/*.js"
