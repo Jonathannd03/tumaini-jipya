@@ -3,10 +3,10 @@
     <div class="container mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-3 sm:py-4">
         <!-- Logo Section -->
-        <NuxtLink to="/" class="flex items-center gap-2 sm:gap-3">
-          <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="h-50 w-10 sm:h-12 sm:w-12 object-contain">
-          <div class="flex flex-col">
-            <span class="text-lg sm:text-xl font-bold text-teal-700 leading-tight">{{ ORGANIZATION.fullName }}</span>
+        <NuxtLink to="/" class="flex items-center gap-2 sm:gap-3 flex-shrink min-w-0">
+          <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="h-8 w-8 sm:h-12 sm:w-12 object-contain flex-shrink-0">
+          <div class="flex flex-col min-w-0">
+            <span class="text-base sm:text-xl font-bold text-teal-700 leading-tight">{{ ORGANIZATION.fullName }}</span>
             <span class="text-xs text-gray-700 font-medium">e.V.</span>
           </div>
         </NuxtLink>
@@ -27,8 +27,8 @@
         
         <!-- Action Buttons -->
         <div class="flex items-center gap-2 sm:gap-3">
-          <!-- Language Switcher - visible on all screen sizes -->
-          <div>
+          <!-- Language Switcher - hidden on mobile, visible on larger screens -->
+          <div class="hidden md:block">
             <UiLanguageSwitcher />
           </div>
 
