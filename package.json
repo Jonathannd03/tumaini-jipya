@@ -3,10 +3,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build && nuxt generate",
+    "build": "nuxt build",
+    "prepare": "nuxt generate",
+    "postinstall": "npx --yes rebuild-native-modules || true",
     "dev": "nuxt dev",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^8.5.6",
