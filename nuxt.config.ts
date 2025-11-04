@@ -11,12 +11,27 @@ export default defineNuxtConfig({
     // Private keys that are only available on the server
     resendApiKey: process.env.RESEND_API_KEY,
   },
+  experimental: {
+    typedPages: false,
+  },
+  vite: {
+    esbuild: {
+      supported: {
+        "top-level-await": true,
+      },
+    },
+  },
   css: ["~/assets/css/tailwind.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+
+  typescript: {
+    typeCheck: false,
+    shim: false,
   },
 
   i18n: {
