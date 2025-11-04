@@ -7,7 +7,7 @@
 
 [build.environment]
   # Set Node version to ensure compatibility
-  NODE_VERSION = "20"
+  NODE_VERSION = "20.10.0"
 
   # Increase Node memory limit for build process
   NODE_OPTIONS = "--max-old-space-size=4096"
@@ -17,10 +17,6 @@
 
   # Disable prepare/postinstall scripts during install if needed
   # SKIP_PREPARE = "true"
-  
-# Force npm instead of pnpm
-[context.production.environment]
-  NPM_USE_PRODUCTION = "false"
 
 # Redirects for SPA routing
 [[redirects]]
