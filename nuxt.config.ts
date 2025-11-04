@@ -2,9 +2,14 @@
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-09-12",
-  ssr: false,
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n"],
+
+  // Hybrid rendering: static pages + serverless API routes
+  routeRules: {
+    '/': { prerender: true },
+    '/**': { ssr: false }, // Client-side rendering for all pages
+  },
 
   runtimeConfig: {
     // Private keys that are only available on the server
