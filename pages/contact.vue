@@ -419,7 +419,7 @@
       setTimeout(() => {
         submitSuccess.value = false;
       }, 5000);
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error submitting form:', error);
       submitError.value = error.data?.statusMessage || 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
     } finally {

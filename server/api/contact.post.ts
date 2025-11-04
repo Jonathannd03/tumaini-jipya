@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 export default defineEventHandler(async (event) => {
   try {
@@ -24,22 +24,24 @@ export default defineEventHandler(async (event) => {
       });
     }
 
-    // Get email configuration from environment variables
+    // Get configuration from environment variables
     const config = useRuntimeConfig();
+    const resendApiKey = config.resendApiKey || process.env.RESEND_API_KEY;
 
-    // Create transporter
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: config.emailUser || process.env.EMAIL_USER,
-        pass: config.emailPassword || process.env.EMAIL_PASSWORD,
-      },
-    });
+    if (!resendApiKey) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Email service not configured',
+      });
+    }
 
-    // Email content
-    const mailOptions = {
-      from: config.emailUser || process.env.EMAIL_USER,
-      to: 'ndingajonathan96@gmail.com',
+    // Initialize Resend
+    const resend = new Resend(resendApiKey);
+
+    // Send email
+    const { data, error } = await resend.emails.send({
+      from: 'Tumaini Jipya <onboarding@resend.dev>',
+      to: ['ndingajonathan96@gmail.com'],
       replyTo: email,
       subject: `Kontaktformular: ${subject}`,
       html: `
@@ -65,28 +67,20 @@ export default defineEventHandler(async (event) => {
           </div>
         </div>
       `,
-      text: `
-Neue Nachricht vom Kontaktformular
+    });
 
-Name: ${name}
-E-Mail: ${email}
-${phone ? `Telefon: ${phone}` : ''}
-Betreff: ${subject}
-
-Nachricht:
-${message}
-
----
-Diese Nachricht wurde über das Kontaktformular auf www.tumaini-jipya.org gesendet.
-      `,
-    };
-
-    // Send email
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Resend API error:', error);
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Failed to send email',
+      });
+    }
 
     return {
       success: true,
       message: 'Email sent successfully',
+      id: data?.id,
     };
   } catch (error: any) {
     console.error('Error sending email:', error);

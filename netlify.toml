@@ -7,7 +7,7 @@
 
 [build.environment]
   # Set Node version to ensure compatibility
-  NODE_VERSION = "20.10.0"
+  NODE_VERSION = "20"
 
   # Increase Node memory limit for build process
   NODE_OPTIONS = "--max-old-space-size=4096"

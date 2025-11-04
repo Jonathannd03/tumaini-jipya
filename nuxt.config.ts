@@ -8,8 +8,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Private keys that are only available on the server
-    emailUser: process.env.EMAIL_USER,
-    emailPassword: process.env.EMAIL_PASSWORD,
+    resendApiKey: process.env.RESEND_API_KEY,
   },
 
   css: ["~/assets/css/tailwind.css"],
