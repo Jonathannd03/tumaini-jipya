@@ -1,46 +1,59 @@
 # Email Configuration Setup
 
-This document explains how to configure the email functionality for the contact form.
+This document explains how to configure the email functionality for the contact form using Resend.
+
+## Why Resend?
+
+Resend is a modern email API service designed for developers:
+- **Easy setup** - No complex SMTP configuration
+- **Free tier** - 100 emails/day, 3,000 emails/month
+- **Fast** - Sends emails in milliseconds
+- **Reliable** - Professional email delivery service
+- **No authentication headaches** - Simple API key setup
 
 ## Prerequisites
 
-The contact form uses Gmail's SMTP server to send emails. You'll need:
-- A Gmail account (ndingajonathan96@gmail.com is already configured)
-- A Gmail App Password (NOT your regular Gmail password)
+You'll need:
+- A Resend account (free to sign up)
+- An API key from Resend
 
 ## Steps to Set Up
 
-### 1. Generate a Gmail App Password
+### 1. Create a Resend Account
 
-Since Gmail requires 2-factor authentication for app access, you need to create an "App Password":
+1. Go to: https://resend.com
+2. Click **"Sign Up"** or **"Get Started"**
+3. Sign up with your email (you can use ndingajonathan96@gmail.com)
+4. Verify your email address
 
-1. Go to your Google Account: https://myaccount.google.com/
-2. Navigate to **Security**
-3. Enable **2-Step Verification** (if not already enabled)
-4. Go to **App passwords**: https://myaccount.google.com/apppasswords
-5. Select **Mail** as the app
-6. Select **Other (Custom name)** as the device
-7. Enter "Tumaini Jipya Website" as the name
-8. Click **Generate**
-9. Copy the 16-character password (you won't be able to see it again)
+### 2. Get Your API Key
 
-### 2. Update the .env File
+1. Log in to your Resend dashboard: https://resend.com/api-keys
+2. Click **"Create API Key"**
+3. Give it a name like "Tumaini Jipya Website"
+4. Select **"Sending access"** permission
+5. Click **"Create"**
+6. Copy the API key (it starts with `re_` and looks like `re_xxxxxxxxxxxxx`)
 
-Open the `.env` file in the project root and update the `EMAIL_PASSWORD`:
+**Important:** Save this key immediately - you won't be able to see it again!
+
+### 3. Update the .env File
+
+Open the `.env` file in the project root and update the `RESEND_API_KEY`:
 
 ```env
-EMAIL_USER=ndingajonathan96@gmail.com
-EMAIL_PASSWORD=your-16-character-app-password-here
+RESEND_API_KEY=re_your_actual_api_key_here
 ```
 
-Replace `your-16-character-app-password-here` with the App Password you generated.
+Replace `re_your_actual_api_key_here` with the API key you copied from Resend.
 
 **Important:** Never commit the `.env` file to version control. It's already in `.gitignore`.
 
-### 3. Test the Configuration
+### 4. Test the Configuration
 
-1. Start the development server:
+1. Restart the development server (to load the new environment variable):
    ```bash
+   # Kill existing servers and restart
    npm run dev
    ```
 
@@ -49,6 +62,8 @@ Replace `your-16-character-app-password-here` with the App Password you generate
 3. Fill out and submit the form
 
 4. Check the inbox of ndingajonathan96@gmail.com for the test email
+
+**Note:** In development, Resend will send from `onboarding@resend.dev`. This is normal for testing.
 
 ## Form Validation Rules
 
@@ -62,33 +77,44 @@ The contact form includes the following validation:
 
 ## Troubleshooting
 
-### "Invalid credentials" Error
+### "Email service not configured" Error
 
-- Make sure you're using an **App Password**, not your regular Gmail password
-- Check that 2-Step Verification is enabled on your Google account
-- Verify the App Password is correctly copied (no spaces)
+- Make sure the `.env` file exists in the project root
+- Verify that `RESEND_API_KEY` is set in the `.env` file
+- Restart the development server after adding the API key
+- Check that the API key starts with `re_`
 
 ### "Failed to send email" Error
 
+- Verify your API key is correct (no extra spaces or characters)
+- Check that your Resend account is active
 - Check your internet connection
-- Verify Gmail SMTP is not blocked by your network
-- Ensure the environment variables are loaded (restart the dev server)
+- Look at the server console for detailed error messages
+- Ensure you haven't exceeded the free tier limit (100 emails/day)
 
 ### Email Not Received
 
 - Check your spam/junk folder
-- Verify the email address in the API endpoint (server/api/contact.post.ts)
-- Check the server console for error messages
+- Verify the recipient email in server/api/contact.post.ts (line 44)
+- Check the Resend dashboard logs: https://resend.com/emails
+- The Resend logs show all sent emails and their delivery status
+
+### "Rate limit exceeded" Error
+
+- Free tier: 100 emails/day, 3,000 emails/month
+- Consider upgrading your Resend plan if you need more
+- Check your Resend dashboard for usage statistics
 
 ## Production Deployment
 
-For Netlify deployment, add the environment variables in the Netlify dashboard:
+For Netlify deployment, add the environment variable in the Netlify dashboard:
 
 1. Go to your site in Netlify
 2. Navigate to **Site settings** > **Environment variables**
-3. Add the following variables:
-   - `EMAIL_USER`: ndingajonathan96@gmail.com
-   - `EMAIL_PASSWORD`: your-app-password
+3. Add the following variable:
+   - Key: `RESEND_API_KEY`
+   - Value: Your Resend API key (starts with `re_`)
+4. Redeploy your site
 
 ## Email Template
 
@@ -100,9 +126,28 @@ The email sent includes:
 - Message content
 - Timestamp and source information
 
+## Using a Custom Domain (Optional)
+
+By default, emails are sent from `onboarding@resend.dev`. To use your own domain:
+
+1. Add your domain in Resend: https://resend.com/domains
+2. Follow the DNS configuration steps (add SPF, DKIM records)
+3. Update the `from` field in `server/api/contact.post.ts`:
+   ```typescript
+   from: 'Tumaini Jipya <contact@tumaini-jipya.org>',
+   ```
+
+## Resend Free Tier Limits
+
+- **100 emails per day**
+- **3,000 emails per month**
+- Perfect for contact forms on most small to medium websites
+- Upgrade available if you need more
+
 ## Security Notes
 
-- Email credentials are stored in environment variables
+- API key is stored in environment variables
 - The API endpoint is server-side only (not exposed to clients)
 - Email validation is performed on both client and server
-- The API includes rate limiting protection through Nuxt's built-in features
+- Resend handles rate limiting automatically
+- Never commit the `.env` file to version control
