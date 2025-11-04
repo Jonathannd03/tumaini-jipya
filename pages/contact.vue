@@ -66,14 +66,20 @@
                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
                   {{ $t('contact.form.name') }} *
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="name"
                   v-model="formData.name"
+                  @blur="validateName"
+                  @input="formErrors.name = ''"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  :class="[
+                    'w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all',
+                    formErrors.name ? 'border-red-500' : 'border-gray-300'
+                  ]"
                   placeholder="Ihr vollständiger Name"
                 />
+                <p v-if="formErrors.name" class="mt-1 text-sm text-red-600">{{ formErrors.name }}</p>
               </div>
   
               <!-- Email -->
@@ -81,14 +87,20 @@
                 <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
                   {{ $t('contact.form.email') }} *
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   id="email"
                   v-model="formData.email"
+                  @blur="validateEmail"
+                  @input="formErrors.email = ''"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  :class="[
+                    'w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all',
+                    formErrors.email ? 'border-red-500' : 'border-gray-300'
+                  ]"
                   placeholder="ihre@email.de"
                 />
+                <p v-if="formErrors.email" class="mt-1 text-sm text-red-600">{{ formErrors.email }}</p>
               </div>
   
               <!-- Phone -->
@@ -113,8 +125,13 @@
                 <select
                   id="subject"
                   v-model="formData.subject"
+                  @blur="validateSubject"
+                  @change="formErrors.subject = ''"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  :class="[
+                    'w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all',
+                    formErrors.subject ? 'border-red-500' : 'border-gray-300'
+                  ]"
                 >
                   <option value="">{{ $t('contact.form.subjects.select') }}</option>
                   <option value="spende">{{ $t('contact.form.subjects.donation') }}</option>
@@ -124,6 +141,7 @@
                   <option value="allgemein">{{ $t('contact.form.subjects.general') }}</option>
                   <option value="sonstiges">{{ $t('contact.form.subjects.other') }}</option>
                 </select>
+                <p v-if="formErrors.subject" class="mt-1 text-sm text-red-600">{{ formErrors.subject }}</p>
               </div>
   
               <!-- Message -->
@@ -131,28 +149,38 @@
                 <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
                   {{ $t('contact.form.message') }} *
                 </label>
-                <textarea 
+                <textarea
                   id="message"
                   v-model="formData.message"
+                  @blur="validateMessage"
+                  @input="formErrors.message = ''"
                   required
                   rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  :class="[
+                    'w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none',
+                    formErrors.message ? 'border-red-500' : 'border-gray-300'
+                  ]"
                   placeholder="Ihre Nachricht an uns..."
                 ></textarea>
+                <p v-if="formErrors.message" class="mt-1 text-sm text-red-600">{{ formErrors.message }}</p>
               </div>
   
               <!-- Privacy Checkbox -->
-              <div class="flex items-start gap-3">
-                <input 
-                  type="checkbox" 
-                  id="privacy"
-                  v-model="formData.privacy"
-                  required
-                  class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                />
-                <label for="privacy" class="text-sm text-gray-600">
-                  {{ $t('contact.form.privacy') }}
-                </label>
+              <div>
+                <div class="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    v-model="formData.privacy"
+                    @change="formErrors.privacy = ''"
+                    required
+                    class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <label for="privacy" class="text-sm text-gray-600">
+                    {{ $t('contact.form.privacy') }}
+                  </label>
+                </div>
+                <p v-if="formErrors.privacy" class="mt-1 text-sm text-red-600">{{ formErrors.privacy }}</p>
               </div>
   
               <!-- Submit Button -->
@@ -175,6 +203,11 @@
               <div v-if="submitSuccess" class="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
                 ✓ {{ $t('contact.form.success') }}
               </div>
+
+              <!-- Error Message -->
+              <div v-if="submitError" class="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                ✕ {{ submitError }}
+              </div>
             </form>
           </div>
         </div>
@@ -188,7 +221,8 @@
   const { CONTACT_INFO, ORGANIZATION } = useConstants();
   const isSubmitting = ref(false);
   const submitSuccess = ref(false);
-  
+  const submitError = ref('');
+
   const formData = reactive({
     name: '',
     email: '',
@@ -197,6 +231,83 @@
     message: '',
     privacy: false
   });
+
+  const formErrors = reactive({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    privacy: ''
+  });
+
+  // Validation functions
+  const validateName = () => {
+    if (!formData.name.trim()) {
+      formErrors.name = 'Name ist erforderlich';
+      return false;
+    }
+    if (formData.name.trim().length < 2) {
+      formErrors.name = 'Name muss mindestens 2 Zeichen lang sein';
+      return false;
+    }
+    formErrors.name = '';
+    return true;
+  };
+
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      formErrors.email = 'E-Mail ist erforderlich';
+      return false;
+    }
+    if (!emailRegex.test(formData.email)) {
+      formErrors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
+      return false;
+    }
+    formErrors.email = '';
+    return true;
+  };
+
+  const validateSubject = () => {
+    if (!formData.subject) {
+      formErrors.subject = 'Bitte wählen Sie einen Betreff';
+      return false;
+    }
+    formErrors.subject = '';
+    return true;
+  };
+
+  const validateMessage = () => {
+    if (!formData.message.trim()) {
+      formErrors.message = 'Nachricht ist erforderlich';
+      return false;
+    }
+    if (formData.message.trim().length < 10) {
+      formErrors.message = 'Nachricht muss mindestens 10 Zeichen lang sein';
+      return false;
+    }
+    formErrors.message = '';
+    return true;
+  };
+
+  const validatePrivacy = () => {
+    if (!formData.privacy) {
+      formErrors.privacy = 'Sie müssen den Datenschutzbestimmungen zustimmen';
+      return false;
+    }
+    formErrors.privacy = '';
+    return true;
+  };
+
+  const validateForm = () => {
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isSubjectValid = validateSubject();
+    const isMessageValid = validateMessage();
+    const isPrivacyValid = validatePrivacy();
+
+    return isNameValid && isEmailValid && isSubjectValid && isMessageValid && isPrivacyValid;
+  };
   
   const contactMethods = [
     {
@@ -268,26 +379,51 @@
   ];
   
   const handleSubmit = async () => {
+    // Reset error messages
+    submitError.value = '';
+    submitSuccess.value = false;
+
+    // Validate form
+    if (!validateForm()) {
+      return;
+    }
+
     isSubmitting.value = true;
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Reset form
-    Object.keys(formData).forEach(key => {
-      if (typeof formData[key] === 'boolean') {
-        formData[key] = false;
-      } else {
-        formData[key] = '';
-      }
-    });
-    
-    isSubmitting.value = false;
-    submitSuccess.value = true;
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      submitSuccess.value = false;
-    }, 5000);
+
+    try {
+      // Send form data to API
+      const response = await $fetch('/api/contact', {
+        method: 'POST',
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+      });
+
+      // Show success message
+      submitSuccess.value = true;
+
+      // Reset form
+      Object.keys(formData).forEach(key => {
+        if (typeof formData[key] === 'boolean') {
+          formData[key] = false;
+        } else {
+          formData[key] = '';
+        }
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        submitSuccess.value = false;
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      submitError.value = error.data?.statusMessage || 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+    } finally {
+      isSubmitting.value = false;
+    }
   };
   </script>

@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n"],
 
+  runtimeConfig: {
+    // Private keys that are only available on the server
+    resendApiKey: process.env.RESEND_API_KEY,
+  },
+
   css: ["~/assets/css/tailwind.css"],
 
   postcss: {
