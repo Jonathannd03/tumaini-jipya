@@ -13,7 +13,7 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
 
   # npm install flags
-  NPM_FLAGS = "--legacy-peer-deps --omit=optional --no-optional"
+  NPM_FLAGS = "--legacy-peer-deps"
 
   # Disable prepare/postinstall scripts during install if needed
   # SKIP_PREPARE = "true"
