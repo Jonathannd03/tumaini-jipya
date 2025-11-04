@@ -3,7 +3,7 @@
   command = "npm run build"
 
   # Output directory for static files
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   # Set Node version to ensure compatibility
