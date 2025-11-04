@@ -85,6 +85,9 @@ export default {
     beneficiaries: 'Beneficiaries',
     details: 'Details',
     viewAll: 'View all projects',
+    comingSoon: 'Coming Soon',
+    interestedText: 'Interested in our projects? Contact us for more information.',
+    contactUs: 'Contact Us',
     educationCenter: {
       title: 'Education Center for Children',
       description: 'Building an education center with tutoring and language support for 150 refugee children.'

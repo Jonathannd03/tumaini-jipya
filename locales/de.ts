@@ -85,6 +85,9 @@ export default {
     beneficiaries: 'Begünstigte',
     details: 'Details',
     viewAll: 'Alle Projekte ansehen',
+    comingSoon: 'Demnächst verfügbar',
+    interestedText: 'Interessiert an unseren Projekten? Kontaktieren Sie uns für weitere Informationen.',
+    contactUs: 'Kontaktieren Sie uns',
     educationCenter: {
       title: 'Bildungszentrum für Kinder',
       description: 'Aufbau eines Bildungszentrums mit Nachhilfe und Sprachförderung für 150 geflüchtete Kinder.'

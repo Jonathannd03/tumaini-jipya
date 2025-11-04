@@ -60,12 +60,9 @@
                 <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">150+</div>
               </div>
-              <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>{{ $t('projects.details') }}</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="text-xs sm:text-sm text-gray-500 italic">
+                {{ $t('projects.comingSoon') }}
+              </div>
             </div>
           </div>
         </div>
@@ -106,12 +103,9 @@
                 <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">500+</div>
               </div>
-              <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>{{ $t('projects.details') }}</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="text-xs sm:text-sm text-gray-500 italic">
+                {{ $t('projects.comingSoon') }}
+              </div>
             </div>
           </div>
         </div>
@@ -152,25 +146,25 @@
                 <div class="text-xs text-gray-500 mb-1">{{ $t('projects.beneficiaries') }}</div>
                 <div class="text-base sm:text-lg font-bold text-gray-900">300+</div>
               </div>
-              <a href="/projekte" class="flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                <span>{{ $t('projects.details') }}</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="text-xs sm:text-sm text-gray-500 italic">
+                {{ $t('projects.comingSoon') }}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- View All CTA -->
+      <!-- Contact CTA -->
       <div class="mt-12 sm:mt-14 lg:mt-16 text-center">
-        <a href="/projekte" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gray-900 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg hover:bg-gray-800 transform hover:-translate-y-1 transition-all duration-300">
-          <span>{{ $t('projects.viewAll') }}</span>
+        <p class="text-base sm:text-lg text-gray-600 mb-6">
+          {{ $t('projects.interestedText') }}
+        </p>
+        <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <span>{{ $t('projects.contactUs') }}</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>

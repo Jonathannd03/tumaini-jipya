@@ -85,6 +85,9 @@ export default {
     beneficiaries: 'Bénéficiaires',
     details: 'Détails',
     viewAll: 'Voir tous les projets',
+    comingSoon: 'Bientôt disponible',
+    interestedText: 'Intéressé par nos projets ? Contactez-nous pour plus d\'informations.',
+    contactUs: 'Contactez-nous',
     educationCenter: {
       title: 'Centre éducatif pour enfants',
       description: 'Construction d\'un centre éducatif avec tutorat et soutien linguistique pour 150 enfants réfugiés.'

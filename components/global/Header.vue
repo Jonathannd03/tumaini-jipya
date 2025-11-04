@@ -27,8 +27,8 @@
         
         <!-- Action Buttons -->
         <div class="flex items-center gap-2 sm:gap-3">
-          <!-- Language Switcher - hidden on mobile, visible on larger screens -->
-          <div class="hidden md:block">
+          <!-- Language Switcher - compact on mobile, full on desktop -->
+          <div>
             <UiLanguageSwitcher />
           </div>
 

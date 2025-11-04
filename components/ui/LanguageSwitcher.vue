@@ -1,8 +1,18 @@
 <template>
   <div class="relative" ref="dropdownRef">
+    <!-- Mobile: Simple flag button that cycles through languages -->
+    <button
+      @click="cycleMobile"
+      class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-gray-300 hover:border-teal-600 transition-colors duration-200 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+      :aria-label="`Current language: ${currentLanguage.name}`"
+    >
+      <span class="text-xl">{{ currentLanguage.flag }}</span>
+    </button>
+
+    <!-- Desktop: Full dropdown -->
     <button
       @click="toggleDropdown"
-      class="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 hover:border-teal-600 transition-colors duration-200 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+      class="hidden md:flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 hover:border-teal-600 transition-colors duration-200 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500"
       :aria-expanded="isOpen"
       aria-haspopup="true"
     >
@@ -85,6 +95,13 @@ const toggleDropdown = () => {
 const switchLanguage = async (code) => {
   await setLocale(code);
   isOpen.value = false;
+};
+
+// Mobile: cycle through languages on tap
+const cycleMobile = async () => {
+  const currentIndex = languages.findIndex(lang => lang.code === locale.value);
+  const nextIndex = (currentIndex + 1) % languages.length;
+  await setLocale(languages[nextIndex].code);
 };
 
 const handleClickOutside = (event) => {
