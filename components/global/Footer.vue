@@ -12,7 +12,7 @@
             </div>
           </div>
           <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
-            {{ ORGANIZATION.tagline }}
+            {{ $t('hero.description') }}
           </p>
           
           <!-- Social Icons -->
@@ -49,7 +49,7 @@
         
         <!-- Quick Links -->
         <div>
-          <h3 class="font-bold text-lg mb-4 text-teal-300">Quick Links</h3>
+          <h3 class="font-bold text-lg mb-4 text-teal-300">{{ $t('footer.quickLinks') }}</h3>
           <ul class="space-y-3">
             <li v-for="link in footerLinks" :key="link.href">
               <NuxtLink :to="link.href" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
@@ -59,24 +59,24 @@
             </li>
           </ul>
         </div>
-        
+
         <!-- Legal -->
         <div>
-          <h3 class="font-bold text-lg mb-4 text-teal-300">Rechtliches</h3>
+          <h3 class="font-bold text-lg mb-4 text-teal-300">{{ $t('footer.legal') }}</h3>
           <ul class="space-y-3">
             <li>
               <NuxtLink to="/impressium" class="text-gray-300 hover:text-teal-300 transition-colors text-sm sm:text-base flex items-center gap-2 group">
                 <span class="w-1.5 h-1.5 bg-teal-400 rounded-full group-hover:scale-150 transition-transform"></span>
-                Impressum
+                {{ $t('footer.impressum') }}
               </NuxtLink>
             </li>
-            
+
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h3 class="font-bold text-lg mb-4 text-teal-300">Kontakt</h3>
+          <h3 class="font-bold text-lg mb-4 text-teal-300">{{ $t('footer.contact') }}</h3>
           <ul class="space-y-3 text-sm sm:text-base">
             <li class="flex items-start gap-3 text-gray-300">
               <svg class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,10 +104,10 @@
       <div class="border-t border-gray-700/50 mt-8 sm:mt-12 pt-6 sm:pt-8">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p class="text-center sm:text-left">
-            &copy; {{ new Date().getFullYear() }} {{ ORGANIZATION.name }} · Alle Rechte vorbehalten.
+            &copy; {{ new Date().getFullYear() }} {{ ORGANIZATION.name }} · {{ $t('footer.allRightsReserved') }}.
           </p>
           <div class="flex items-center gap-2">
-            <span class="text-xs">Gemeinnützig anerkannt</span>
+            <span class="text-xs">{{ $t('footer.nonprofitRecognized') }}</span>
             <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
@@ -119,13 +119,17 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
+
+const { t } = useI18n();
 const { NAVIGATION_LINKS, SOCIAL_LINKS, CONTACT_INFO, ORGANIZATION } = useConstants();
 
 // Footer navigation (subset of main navigation)
-const footerLinks = [
-  { label: 'Über uns', href: '/about-us' },
-  { label: 'Projekte', href: '/projects' },
-  { label: 'Mitglied werden', href: '/membership' },
-  { label: 'Kontakt', href: '/contact' }
-];
+const footerLinks = computed(() => [
+  { label: t('nav.aboutUs'), href: '/about-us' },
+  { label: t('nav.projects'), href: '/projects' },
+  { label: t('nav.membership'), href: '/membership' },
+  { label: t('nav.contact'), href: '/contact' }
+]);
 </script>

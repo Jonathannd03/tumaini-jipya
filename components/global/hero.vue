@@ -17,46 +17,46 @@
         <!-- Subtle badge -->
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
           <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-          <span class="text-sm font-medium">Gemeinsam für eine bessere Zukunft</span>
+          <span class="text-sm font-medium">{{ $t('hero.badge') }}</span>
         </div>
-        
+
         <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Neue Hoffnung<br />
-          <span class="text-emerald-300">schaffen</span>
+          {{ $t('hero.title') }}<br />
+          <span class="text-emerald-300">{{ $t('hero.titleHighlight') }}</span>
         </h1>
-        
+
         <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl">
-          Tumaini Jipya e.V. setzt sich ein für humanitäre Hilfe, Klimaschutz und Bildungsförderung in Krisenregionen weltweit.
+          {{ $t('hero.description') }}
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4">
-          <NuxtLink to="/projects" 
+          <NuxtLink to="/projects"
             class="px-8 py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-            
+
           >
-            Unsere Projekte entdecken
+            {{ $t('hero.discoverProjects') }}
           </NuxtLink>
-          
+
           <NuxtLink to="/donate"
             class="px-8 py-4 border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-lg transition-all duration-300 text-lg"
           >
-            Jetzt unterstützen
+            {{ $t('hero.supportNow') }}
           </NuxtLink>
         </div>
-        
+
         <!-- Trust indicators -->
         <div class="flex flex-wrap items-center gap-6 mt-12 pt-12 border-t border-white/20">
           <div class="flex items-center gap-2 text-sm text-white/80">
             <svg class="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Gemeinnützig anerkannt</span>
+            <span>{{ $t('hero.trustIndicator1') }}</span>
           </div>
           <div class="flex items-center gap-2 text-sm text-white/80">
             <svg class="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Transparente Mittelverwendung</span>
+            <span>{{ $t('hero.trustIndicator2') }}</span>
           </div>
         </div>
       </div>

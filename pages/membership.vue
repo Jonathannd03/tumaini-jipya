@@ -14,14 +14,14 @@
             <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
             </svg>
-            <span class="text-sm font-medium">Werden Sie Teil der Gemeinschaft</span>
+            <span class="text-sm font-medium">{{ $t('membership.badge') }}</span>
           </div>
-          
+
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-            Mitgliedschaft bei <span class="text-emerald-300">Tumaini Jipya e.V.</span>
+            {{ $t('membership.title') }} <span class="text-emerald-300">{{ $t('membership.titleHighlight') }}</span>
           </h1>
           <p class="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
-            Unterstützen Sie unsere Mission und werden Sie Teil einer Bewegung für positive Veränderung
+            {{ $t('membership.description') }}
           </p>
         </div>
       </div>
@@ -33,10 +33,10 @@
         <div class="mb-12 sm:mb-16 lg:mb-20">
           <div class="text-center mb-10 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Arten der Mitgliedschaft
+              {{ $t('membership.types.title') }}
             </h2>
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Wählen Sie die Form der Mitgliedschaft, die am besten zu Ihnen passt
+              {{ $t('membership.types.description') }}
             </p>
           </div>
 
@@ -50,31 +50,31 @@
               </div>
               
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                Ordentliches Mitglied
+                {{ $t('membership.types.regular.title') }}
               </h3>
-              
+
               <p class="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 leading-relaxed">
-                Aktive Mitarbeit mit Stimmrecht in der Mitgliederversammlung
+                {{ $t('membership.types.regular.description') }}
               </p>
-              
+
               <ul class="space-y-3 mb-6">
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Stimmrecht</span>
+                  <span>{{ $t('membership.types.regular.votingRight') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Aktive Mitarbeit</span>
+                  <span>{{ $t('membership.types.regular.activeWork') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Volles Engagement</span>
+                  <span>{{ $t('membership.types.regular.fullEngagement') }}</span>
                 </li>
               </ul>
             </div>
@@ -88,31 +88,31 @@
               </div>
               
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                Fördermitglied
+                {{ $t('membership.types.supporting.title') }}
               </h3>
-              
+
               <p class="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 leading-relaxed">
-                Unterstützung des Vereins ideell oder materiell
+                {{ $t('membership.types.supporting.description') }}
               </p>
-              
+
               <ul class="space-y-3 mb-6">
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Ideelle Unterstützung</span>
+                  <span>{{ $t('membership.types.supporting.idealSupport') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Materielle Förderung</span>
+                  <span>{{ $t('membership.types.supporting.materialSupport') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Regelmäßige Updates</span>
+                  <span>{{ $t('membership.types.supporting.regularUpdates') }}</span>
                 </li>
               </ul>
             </div>
@@ -126,31 +126,31 @@
               </div>
               
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                Ehrenmitglied
+                {{ $t('membership.types.honorary.title') }}
               </h3>
-              
+
               <p class="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 leading-relaxed">
-                Für verdiente Personen durch Beschluss der Mitgliederversammlung
+                {{ $t('membership.types.honorary.description') }}
               </p>
-              
+
               <ul class="space-y-3 mb-6">
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Beitragsfrei</span>
+                  <span>{{ $t('membership.types.honorary.contributionFree') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Besondere Anerkennung</span>
+                  <span>{{ $t('membership.types.honorary.specialRecognition') }}</span>
                 </li>
                 <li class="flex items-start gap-2 text-sm sm:text-base text-gray-700">
                   <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Ehrenamt</span>
+                  <span>{{ $t('membership.types.honorary.volunteer') }}</span>
                 </li>
               </ul>
             </div>
@@ -160,9 +160,9 @@
         <!-- Membership Process -->
         <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 mb-12 sm:mb-16 border border-gray-100">
           <div class="text-center mb-8 sm:mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Mitglied werden</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{{ $t('membership.process.title') }}</h2>
             <p class="text-base sm:text-lg text-gray-600">
-              In vier einfachen Schritten zur Mitgliedschaft
+              {{ $t('membership.process.description') }}
             </p>
           </div>
 
@@ -173,9 +173,9 @@
                 1
               </div>
               <div class="flex-1 pt-1">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Antrag stellen</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('membership.process.step1.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Schriftlicher Aufnahmeantrag an den Vorstand
+                  {{ $t('membership.process.step1.description') }}
                 </p>
               </div>
             </div>
@@ -189,9 +189,9 @@
                 2
               </div>
               <div class="flex-1 pt-1">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Vorstandsentscheidung</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('membership.process.step2.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Beschluss über die Aufnahme durch den Vorstand
+                  {{ $t('membership.process.step2.description') }}
                 </p>
               </div>
             </div>
@@ -205,9 +205,9 @@
                 3
               </div>
               <div class="flex-1 pt-1">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Probezeit</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('membership.process.step3.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Sechsmonatige Probezeit ohne Beitragspflicht
+                  {{ $t('membership.process.step3.description') }}
                 </p>
               </div>
             </div>
@@ -221,9 +221,9 @@
                 4
               </div>
               <div class="flex-1 pt-1">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Vollmitgliedschaft</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('membership.process.step4.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Nach erfolgreicher Probezeit volle Mitgliederrechte
+                  {{ $t('membership.process.step4.description') }}
                 </p>
               </div>
             </div>
@@ -242,30 +242,30 @@
               </svg>
             </div>
             
-            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Haben Sie Fragen?</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">{{ $t('membership.questions.title') }}</h2>
             <p class="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Kontaktieren Sie uns für weitere Informationen zur Mitgliedschaft
+              {{ $t('membership.questions.description') }}
             </p>
-            
+
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
               <NuxtLink
                 to="/contact"
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
-                <span>Kontakt aufnehmen</span>
+                <span>{{ $t('membership.questions.contactUs') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
               </NuxtLink>
-              
-              <a 
-                href="mailto:info@tumaini-jipya.org" 
+
+              <a
+                :href="`mailto:${CONTACT_INFO.email}`"
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-lg transition-all duration-300 text-base sm:text-lg"
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                <span>E-Mail senden</span>
+                <span>{{ $t('membership.questions.sendEmail') }}</span>
               </a>
             </div>
           </div>
@@ -276,5 +276,5 @@
 </template>
 
 <script setup>
-// No additional script needed
+const { ORGANIZATION, CONTACT_INFO } = useConstants();
 </script>

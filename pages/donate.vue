@@ -14,14 +14,14 @@
               <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-sm font-medium">Ihre Unterstützung zählt</span>
+              <span class="text-sm font-medium">{{ $t('donate.badge') }}</span>
             </div>
-            
+
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              Spenden für <span class="text-emerald-300">Tumaini Jipya e.V.</span>
+              {{ $t('donate.title') }} <span class="text-emerald-300">{{ $t('donate.titleHighlight') }}</span>
             </h1>
             <p class="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
-              Ihre Spende macht einen echten Unterschied im Leben der Menschen
+              {{ $t('donate.description') }}
             </p>
           </div>
         </div>
@@ -42,16 +42,16 @@
               </div>
               
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Online-Spenden bald verfügbar
+                {{ $t('donate.comingSoon.title') }}
               </h2>
               <p class="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
-                Wir arbeiten mit Hochdruck daran, Ihnen bald eine einfache und sichere Möglichkeit zu bieten, online zu spenden. 
+                {{ $t('donate.comingSoon.description') }}
               </p>
               <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-gray-900">
                 <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
                 </svg>
-                <span>In Kürze verfügbar</span>
+                <span>{{ $t('donate.comingSoon.availableSoon') }}</span>
               </div>
             </div>
           </div>
@@ -59,10 +59,10 @@
           <div class="mb-12 sm:mb-16">
             <div class="text-center mb-10 sm:mb-12">
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Ihre Spende bewirkt Großes
+                {{ $t('donate.impact.title') }}
               </h2>
               <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Jeder Beitrag hilft uns, unsere Mission zu erfüllen
+                {{ $t('donate.impact.description') }}
               </p>
             </div>
   
@@ -74,9 +74,9 @@
                     <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Humanitäre Hilfe</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('mission.humanitarian.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Nahrung, Kleidung und medizinische Versorgung für Bedürftige
+                  {{ $t('donate.impact.humanitarian') }}
                 </p>
               </div>
   
@@ -87,9 +87,9 @@
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Klimaschutz</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('mission.climate.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Nachhaltige Projekte für eine grünere Zukunft
+                  {{ $t('donate.impact.climate') }}
                 </p>
               </div>
   
@@ -100,9 +100,9 @@
                     <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
                   </svg>
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Bildung</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ $t('mission.education.title') }}</h3>
                 <p class="text-sm sm:text-base text-gray-600">
-                  Bildungsprojekte und Sprachförderung für Kinder
+                  {{ $t('donate.impact.education') }}
                 </p>
               </div>
             </div>
@@ -120,16 +120,16 @@
                 </svg>
               </div>
               
-              <h2 class="text-2xl sm:text-3xl font-bold mb-4">Bleiben Sie informiert</h2>
+              <h2 class="text-2xl sm:text-3xl font-bold mb-4">{{ $t('donate.newsletter.title') }}</h2>
               <p class="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Erfahren Sie als Erste/r, wenn die Online-Spendenfunktion verfügbar ist und erhalten Sie Updates zu unseren Projekten
+                {{ $t('donate.newsletter.description') }}
               </p>
-              
+
               <NuxtLink
                 to="/contact"
                 class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
               >
-                <span>Kontaktieren Sie uns</span>
+                <span>{{ $t('donate.newsletter.contactUs') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -142,5 +142,5 @@
   </template>
 
   <script setup>
-  // No additional script needed
+  const { ORGANIZATION } = useConstants();
   </script>

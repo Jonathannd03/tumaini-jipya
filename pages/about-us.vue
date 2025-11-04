@@ -9,19 +9,19 @@
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
           <div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-4 sm:mb-6">
-            Über uns
+            {{ $t('aboutUs.badge') }}
           </div>
-          
+
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            Gemeinsam für eine <span class="text-teal-600">bessere Zukunft</span>
+            {{ $t('aboutUs.title') }} <span class="text-teal-600">{{ $t('aboutUs.titleHighlight') }}</span>
           </h2>
-          
+
           <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-            Tumaini Jipya bedeutet "Neue Hoffnung" auf Swahili. Wir sind ein gemeinnütziger Verein mit Sitz in Duisburg, der sich für humanitäre Hilfe, Klimaschutz und Bildung einsetzt.
+            {{ $t('aboutUs.intro1') }}
           </p>
-          
+
           <p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-            Unser Ziel ist es, Menschen in Krisenregionen nachhaltig zu unterstützen und gleichzeitig das Bewusstsein für globale Herausforderungen zu stärken.
+            {{ $t('aboutUs.intro2') }}
           </p>
 
           <!-- Values -->
@@ -34,8 +34,8 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">Transparenz</h3>
-                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Wir arbeiten offen und nachvollziehbar - jeder Euro zählt und wird verantwortungsvoll eingesetzt.</p>
+                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">{{ $t('aboutUs.transparency.title') }}</h3>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ $t('aboutUs.transparency.description') }}</p>
               </div>
             </div>
 
@@ -47,8 +47,8 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">Nachhaltigkeit</h3>
-                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Unsere Projekte sind auf langfristige Wirkung ausgelegt und fördern die Selbstständigkeit der Menschen.</p>
+                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">{{ $t('aboutUs.sustainability.title') }}</h3>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ $t('aboutUs.sustainability.description') }}</p>
               </div>
             </div>
 
@@ -60,18 +60,18 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">Toleranz & Respekt</h3>
-                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Wir unterstützen Menschen unabhängig von Herkunft, Religion oder sozialer Stellung.</p>
+                <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1">{{ $t('aboutUs.tolerance.title') }}</h3>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ $t('aboutUs.tolerance.description') }}</p>
               </div>
             </div>
           </div>
 
           <div class="mt-8 sm:mt-10">
-            <a 
-              href="/team" 
+            <a
+              href="/team"
               class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold text-sm sm:text-base group"
             >
-              <span>Mehr über uns erfahren</span>
+              <span>{{ $t('aboutUs.learnMore') }}</span>
               <svg class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -85,7 +85,7 @@
             <!-- Gradient Background with Logo -->
             <div class="aspect-square bg-gradient-to-br from-teal-600 via-emerald-600 to-teal-800 flex items-center justify-center p-8 sm:p-12">
               <div class="text-center text-white">
-                <img src="/images/logo.png" alt="Tumaini Jipya Logo" class="w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 mx-auto object-contain">
+                <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 mx-auto object-contain">
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@
               </div>
               <div>
                 <div class="text-2xl sm:text-3xl font-bold text-gray-900">100%</div>
-                <div class="text-xs sm:text-sm text-gray-600 font-medium">Transparent</div>
+                <div class="text-xs sm:text-sm text-gray-600 font-medium">{{ $t('aboutUs.fullyTransparent') }}</div>
               </div>
             </div>
           </div>
@@ -111,5 +111,5 @@
 </template>
 
 <script setup>
-// No additional script needed - all content is inline
+const { ORGANIZATION } = useConstants();
 </script>

@@ -1,11 +1,16 @@
+import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
+
 export const useConstants = () => {
-  const NAVIGATION_LINKS = [
-    { label: 'Home', href: '/' },
-    { label: 'Über uns', href: '/about-us' },
-    { label: 'Projekte', href: '/projects' },
-    { label: 'Mitgliedschaft', href: '/membership' },
-    { label: 'Kontakt', href: '/contact' }
-  ];
+  const { t } = useI18n();
+
+  const NAVIGATION_LINKS = computed(() => [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.aboutUs'), href: '/about-us' },
+    { label: t('nav.projects'), href: '/projects' },
+    { label: t('nav.membership'), href: '/membership' },
+    { label: t('nav.contact'), href: '/contact' }
+  ]);
 
   const SOCIAL_LINKS = [
     {
@@ -37,33 +42,32 @@ export const useConstants = () => {
   const ORGANIZATION = {
     name: 'Tumaini Jipya e.V.',
     fullName: 'Tumaini Jipya',
-    tagline: 'Gemeinsam für humanitäre Hilfe, Klimaschutz und Bildung in Krisenregionen.',
     logoPath: '/images/logo.png'
   };
 
-  const MISSION_AREAS = [
+  const MISSION_AREAS = computed(() => [
     {
       id: 'humanitarian',
-      title: 'Humanitäre Hilfe',
-      description: 'Bereitstellung von Nahrungsmitteln, Kleidung, Medikamenten und Unterkünften für Menschen in Krisenregionen.',
+      title: t('mission.humanitarian.title'),
+      description: t('mission.humanitarian.description'),
       gradient: 'from-red-500 to-pink-600',
       icon: 'heart'
     },
     {
       id: 'climate',
-      title: 'Klimaschutz',
-      description: 'Förderung klimafreundlicher Projekte und Unterstützung lokaler Initiativen für eine nachhaltige Zukunft.',
+      title: t('mission.climate.title'),
+      description: t('mission.climate.description'),
       gradient: 'from-green-500 to-emerald-600',
       icon: 'globe'
     },
     {
       id: 'education',
-      title: 'Bildungsförderung',
-      description: 'Durchführung von Bildungsprojekten, Sprachförderung und Freizeitgestaltung für geflüchtete Kinder.',
+      title: t('mission.education.title'),
+      description: t('mission.education.description'),
       gradient: 'from-blue-500 to-indigo-600',
       icon: 'education'
     }
-  ];
+  ]);
 
   return {
     NAVIGATION_LINKS,
