@@ -29,5 +29,8 @@
     "replace-in-file": {
       "glob": "^10.3.10"
     }
+  },
+  "optionalDependencies": {
+    "@oxc-parser/binding-darwin-arm64": "^0.96.0"
   }
 }
