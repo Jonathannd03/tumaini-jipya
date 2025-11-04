@@ -5,13 +5,50 @@ export default defineNuxtConfig({
   ssr: false,
   target: "static",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
-  css: ["~/assets/css/main.css"],
+  modules: ["@nuxtjs/i18n"],
+
+  css: ["~/assets/css/tailwind.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+
+  i18n: {
+    locales: [
+      {
+        code: "de",
+        iso: "de-DE",
+        name: "Deutsch",
+        file: "de.ts",
+      },
+      {
+        code: "en",
+        iso: "en-US",
+        name: "English",
+        file: "en.ts",
+      },
+      {
+        code: "fr",
+        iso: "fr-FR",
+        name: "Français",
+        file: "fr.ts",
+      },
+    ],
+    lazy: true,
+    langDir: "locales",
+    defaultLocale: "de",
+    strategy: "prefix_except_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      alwaysRedirect: false,
+      fallbackLocale: "de",
+    },
+    vueI18n: "./i18n.config.ts",
   },
   app: {
     head: {
@@ -19,8 +56,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "description",
-          content:
-            "Wie geben Hoffung da wo es sie nicht mehr gibt.",
+          content: "Wie geben Hoffung da wo es sie nicht mehr gibt.",
         },
         {
           name: "keywords",
@@ -39,33 +75,6 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
         },
       ],
-    },
-  },
-  tailwindcss: {
-    config: {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-          },
-          colors: {
-            primary: {
-              50: "#f0f9ff",
-              500: "#667eea",
-              600: "#5a67d8",
-              700: "#4c51bf",
-            },
-            secondary: {
-              500: "#764ba2",
-              600: "#6b46c1",
-            },
-          },
-          animation: {
-            float: "float 6s ease-in-out infinite",
-            "slide-in": "slideIn 0.6s ease-out",
-          },
-        },
-      },
     },
   },
 });
