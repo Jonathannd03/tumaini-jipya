@@ -12,8 +12,11 @@
   # Increase Node memory limit for build process
   NODE_OPTIONS = "--max-old-space-size=4096"
 
-  # Skip optional dependencies that might fail
-  NPM_FLAGS = "--legacy-peer-deps"
+  # npm install flags
+  NPM_FLAGS = "--legacy-peer-deps --omit=optional --no-optional"
+
+  # Disable prepare/postinstall scripts during install if needed
+  # SKIP_PREPARE = "true"
 
 # Redirects for SPA routing
 [[redirects]]
