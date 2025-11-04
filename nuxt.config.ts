@@ -3,7 +3,6 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-09-12",
   ssr: false,
-  target: "static",
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n"],
 
@@ -24,7 +23,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: "netlify",
+    preset: "vercel",
     prerender: {
       crawlLinks: true,
       routes: ["/"],
