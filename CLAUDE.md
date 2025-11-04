@@ -39,7 +39,7 @@ npm run preview
 - **Email Service:** Resend API
 - **Font:** Inter (Google Fonts)
 - **Icons:** Font Awesome 6 + inline SVG icons
-- **Deployment:** Netlify
+- **Deployment:** Vercel
 
 ### Project Structure
 
@@ -282,7 +282,7 @@ The contact form (`pages/contact.vue`) includes:
 1. Sign up at https://resend.com (free tier: 100 emails/day)
 2. Get API key from dashboard
 3. Add to `.env`: `RESEND_API_KEY=re_xxxxx`
-4. For production: Add to Netlify environment variables
+4. For production: Add to Vercel environment variables
 
 See `EMAIL_SETUP.md` for detailed setup instructions.
 
@@ -304,25 +304,36 @@ const { ORGANIZATION, NAVIGATION_LINKS } = useConstants();
 
 **Note:** Use these constants instead of hardcoding values. In templates, refs are auto-unwrapped (no `.value` needed).
 
-## Deployment (Netlify)
+## Deployment (Vercel)
 
 **Configuration Files:**
-- `netlify.toml` - Build settings, redirects, headers
-- `.npmrc` - npm configuration (skip optional dependencies)
+- `vercel.json` - Build settings and output directory
+- `.npmrc` - npm configuration (legacy-peer-deps)
 - `package.json` - Build scripts
 
-**Environment Variables (Netlify Dashboard):**
+**Environment Variables (Vercel Dashboard):**
 - `RESEND_API_KEY` - Email service API key
+- Go to: Project Settings → Environment Variables → Add
 
-**Common Deployment Issues:**
-- ❌ Native binding errors (oxc-parser) → Fixed by skipping optional dependencies
-- ❌ Invalid postinstall scripts → Use `nuxt prepare` only
-- ❌ Build script issues → Use `npm run generate` for static generation
+**Deployment Process:**
+1. Push to GitHub
+2. Import project in Vercel dashboard
+3. Add environment variables
+4. Vercel auto-deploys on push to main branch
 
-**Build Process:**
-1. `npm install` (runs `nuxt prepare` postinstall)
-2. `npm run generate` (generates static site)
-3. Deploy `.output/public` directory
+**Build Configuration:**
+- Build command: `npm run generate`
+- Output directory: `dist`
+- Framework preset: Nuxt.js
+
+**Manual Deployment:**
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy from project directory
+vercel
+```
 
 ## Important Paths
 

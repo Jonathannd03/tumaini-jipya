@@ -17,7 +17,7 @@ Tumaini Jipya (Swahili for "New Hope") is a humanitarian non-profit organization
 - **Styling:** TailwindCSS
 - **Internationalization:** @nuxtjs/i18n (German, English, French)
 - **Email Service:** Resend API
-- **Deployment:** Netlify
+- **Deployment:** Vercel
 - **Static Site Generation:** Nitro + Vite
 
 ## Quick Start
@@ -102,21 +102,32 @@ See `EMAIL_SETUP.md` for detailed email configuration instructions.
 
 ## Deployment
 
-The site is deployed on Netlify. Deployment is automatic on push to the main branch.
+The site is deployed on Vercel. Deployment is automatic on push to the main branch.
 
-### Manual Deployment
+### Quick Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Jonathannd03/tumaini_jipya)
+
+Or manually:
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project directory
+3. Follow the prompts to deploy
+
+### Manual Build
 
 ```bash
 # Build for production
 npm run generate
 
-# Deploy .output/public directory
+# Preview production build locally
+npm run preview
 ```
 
-### Netlify Configuration
+### Vercel Environment Variables
 
-Set environment variables in Netlify dashboard:
-- `RESEND_API_KEY` - Your Resend API key
+Set environment variables in Vercel dashboard (Project Settings → Environment Variables):
+- `RESEND_API_KEY` - Your Resend API key (get it from https://resend.com/api-keys)
 
 ## Contributing
 
