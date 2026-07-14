@@ -19,13 +19,13 @@ export default {
   },
   home: {
     seo: {
-      title: 'Tumaini Jipya e.V. – Un nouvel espoir pour les personnes dans les régions en crise',
-      description: 'Association à but non lucratif de Duisbourg, fondée par la diaspora congolaise : aide humanitaire, protection du climat et éducation pour les personnes dans les régions en crise du monde entier. Faites un don ou devenez membre.'
+      title: 'Tumaini Jipya e.V. | Un nouvel espoir pour les personnes dans les régions en crise',
+      description: 'Tumaini Jipya est une association à but non lucratif de Duisbourg. Nous apportons une aide humanitaire et soutenons la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier. Faites un don ou devenez membre.'
     },
     hero: {
       badge: 'De Duisbourg. Pour les personnes dans les régions en crise.',
       title: 'Ensemble, nous créons un nouvel espoir.',
-      subline: 'Tumaini Jipya a été fondée à Duisbourg par des membres de la diaspora congolaise. Aujourd\'hui, nous créons de l\'espoir là où il est le plus nécessaire – par l\'aide humanitaire, la protection du climat et l\'éducation dans les régions en crise du monde entier.',
+      subline: 'Tumaini Jipya est une association à but non lucratif de Duisbourg. Nous créons de l\'espoir là où il est le plus nécessaire : par l\'aide humanitaire, la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier.',
       donateNow: 'Faire un don',
       becomeMember: 'Devenir membre',
       trust1: 'Reconnu d\'utilité publique',
@@ -41,13 +41,13 @@ export default {
     missionIntro: {
       badge: 'Notre mission',
       title: 'Trois façons de créer l\'espoir',
-      description: 'Aide d\'urgence, protection du climat ou éducation – chaque projet naît avec les personnes sur place.'
+      description: 'Aide d\'urgence, protection du climat ou éducation : chaque projet naît avec les personnes sur place.'
     },
     story: {
       badge: 'Pourquoi Tumaini Jipya ?',
-      title: 'Un pont entre Duisbourg et la RD Congo',
-      p1: 'Tumaini Jipya signifie « nouvel espoir » en swahili. Notre association a été fondée à Duisbourg par des personnes dont les racines se trouvent en République démocratique du Congo – et qui considèrent les deux lieux comme leur foyer.',
-      p2: 'Ce lien façonne notre travail : nous connaissons les gens, la langue et les besoins sur place. Ce qui a commencé en RD Congo s\'adresse aujourd\'hui aux personnes dans les régions en crise du monde entier – toujours côte à côte avec les communautés.',
+      title: 'Un espoir qui commence à Duisbourg',
+      p1: 'Tumaini Jipya signifie « nouvel espoir » en swahili. Notre association a été fondée à Duisbourg par des personnes qui savent par expérience ce que signifient la crise, l\'exil et le nouveau départ.',
+      p2: 'Cette compréhension façonne notre travail. Nous écoutons avant d\'agir et développons chaque projet côte à côte avec les personnes sur place.',
       quote: 'Nous n\'aidons pas par pitié, mais par attachement. Chaque projet est un morceau d\'avenir partagé.',
       quoteRole: 'Président',
       learnMore: 'Découvrir notre histoire'
@@ -60,12 +60,12 @@ export default {
     },
     contactStrip: {
       title: 'Restons en contact',
-      description: 'Découvrez l\'impact de nos projets et accompagnez-nous sur ce chemin – nous serons ravis de vous lire.',
+      description: 'Découvrez l\'impact de nos projets et accompagnez-nous sur ce chemin. Nous serons ravis de vous lire.',
       cta: 'Nous contacter'
     },
     finalCta: {
       title: 'Votre soutien fait la différence.',
-      description: 'Grâce à votre don ou à votre adhésion, nous créons ensemble un nouvel espoir – à Duisbourg et dans les régions en crise du monde entier.',
+      description: 'Grâce à votre don ou à votre adhésion, nous créons ensemble un nouvel espoir à Duisbourg et dans les régions en crise du monde entier.',
       donate: 'Faire un don',
       membership: 'Devenir membre',
       footnote: 'Reconnu d\'utilité publique · Les dons sont déductibles des impôts'
@@ -117,7 +117,7 @@ export default {
     datenschutz: 'Politique de confidentialité',
     allRightsReserved: 'Tous droits réservés',
     nonprofitRecognized: 'Reconnu d\'utilité publique',
-    missionSummary: 'Ensemble, nous créons un nouvel espoir – par l\'aide humanitaire, la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier.',
+    missionSummary: 'Ensemble, nous créons un nouvel espoir : par l\'aide humanitaire, la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier.',
     followUs: 'Suivez-nous',
     vereinsregister: {
       title: 'Registre des associations',

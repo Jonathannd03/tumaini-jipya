@@ -19,13 +19,13 @@ export default {
   },
   home: {
     seo: {
-      title: 'Tumaini Jipya e.V. – New hope for people in crisis regions',
-      description: 'Non-profit association from Duisburg, founded by the Congolese diaspora: humanitarian aid, climate protection, and education for people in crisis regions worldwide. Donate or become a member today.'
+      title: 'Tumaini Jipya e.V. | New hope for people in crisis regions',
+      description: 'Tumaini Jipya is a non-profit association from Duisburg. We provide humanitarian aid and support climate protection and education for people in crisis regions worldwide. Donate or become a member today.'
     },
     hero: {
       badge: 'From Duisburg. For people in crisis regions.',
       title: 'Together, we create new hope.',
-      subline: 'Tumaini Jipya was founded in Duisburg by members of the Congolese diaspora. Today we create hope where it is needed most – through humanitarian aid, climate protection, and education in crisis regions worldwide.',
+      subline: 'Tumaini Jipya is a non-profit association from Duisburg. We create hope where it is needed most: through humanitarian aid, climate protection, and education for people in crisis regions worldwide.',
       donateNow: 'Donate now',
       becomeMember: 'Become a member',
       trust1: 'Recognized non-profit',
@@ -41,13 +41,13 @@ export default {
     missionIntro: {
       badge: 'Our Mission',
       title: 'Three ways to create hope',
-      description: 'Whether emergency relief, climate protection, or education – every project is built together with the people on the ground.'
+      description: 'Whether emergency relief, climate protection, or education: every project is built together with the people on the ground.'
     },
     story: {
       badge: 'Why Tumaini Jipya?',
-      title: 'A bridge between Duisburg and the DR Congo',
-      p1: 'Tumaini Jipya means "new hope" in Swahili. Our association was founded in Duisburg by people whose roots lie in the Democratic Republic of the Congo – and who call both places home.',
-      p2: 'This connection shapes our work: we know the people, the language, and the needs on the ground. What began in the DR Congo now reaches people in crisis regions worldwide – always side by side with the communities.',
+      title: 'Hope that starts in Duisburg',
+      p1: 'Tumaini Jipya means "new hope" in Swahili. Our association was founded in Duisburg by people who know from their own experience what crisis, flight, and starting over mean.',
+      p2: 'This understanding shapes our work. We listen before we act, and we develop every project side by side with the people on the ground.',
       quote: 'We don\'t help out of pity, but out of connection. Every project is a piece of shared future.',
       quoteRole: 'Chairman',
       learnMore: 'Read our story'
@@ -60,12 +60,12 @@ export default {
     },
     contactStrip: {
       title: 'Stay in touch with us',
-      description: 'Find out what our projects achieve and join us on the journey – we look forward to hearing from you.',
+      description: 'Find out what our projects achieve and join us on the journey. We look forward to hearing from you.',
       cta: 'Get in touch'
     },
     finalCta: {
       title: 'Your support makes a difference.',
-      description: 'With your donation or membership, together we create new hope – in Duisburg and in crisis regions worldwide.',
+      description: 'With your donation or membership, together we create new hope in Duisburg and in crisis regions worldwide.',
       donate: 'Donate now',
       membership: 'Become a member',
       footnote: 'Recognized non-profit · Donations are tax-deductible'
@@ -117,7 +117,7 @@ export default {
     datenschutz: 'Privacy Policy',
     allRightsReserved: 'All rights reserved',
     nonprofitRecognized: 'Recognized non-profit',
-    missionSummary: 'Together we create new hope – through humanitarian aid, climate protection, and education for people in crisis regions worldwide.',
+    missionSummary: 'Together we create new hope: through humanitarian aid, climate protection, and education for people in crisis regions worldwide.',
     followUs: 'Follow us',
     vereinsregister: {
       title: 'Register of Associations',

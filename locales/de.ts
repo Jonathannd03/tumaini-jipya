@@ -19,13 +19,13 @@ export default {
   },
   home: {
     seo: {
-      title: 'Tumaini Jipya e.V. – Neue Hoffnung für Menschen in Krisenregionen',
-      description: 'Gemeinnütziger Verein aus Duisburg, gegründet von der kongolesischen Diaspora: humanitäre Hilfe, Klimaschutz und Bildung für Menschen in Krisenregionen weltweit. Jetzt spenden oder Mitglied werden.'
+      title: 'Tumaini Jipya e.V. | Neue Hoffnung für Menschen in Krisenregionen',
+      description: 'Tumaini Jipya ist ein gemeinnütziger Verein aus Duisburg. Wir leisten humanitäre Hilfe und fördern Klimaschutz und Bildung für Menschen in Krisenregionen weltweit. Jetzt spenden oder Mitglied werden.'
     },
     hero: {
       badge: 'Aus Duisburg. Für Menschen in Krisenregionen.',
       title: 'Gemeinsam schaffen wir neue Hoffnung.',
-      subline: 'Tumaini Jipya wurde in Duisburg von Menschen aus der kongolesischen Diaspora gegründet. Heute schaffen wir Hoffnung, wo sie am dringendsten gebraucht wird – mit humanitärer Hilfe, Klimaschutz und Bildung in Krisenregionen weltweit.',
+      subline: 'Tumaini Jipya ist ein gemeinnütziger Verein aus Duisburg. Wir schaffen Hoffnung, wo sie am dringendsten gebraucht wird: mit humanitärer Hilfe, Klimaschutz und Bildung für Menschen in Krisenregionen weltweit.',
       donateNow: 'Jetzt spenden',
       becomeMember: 'Mitglied werden',
       trust1: 'Gemeinnützig anerkannt',
@@ -41,13 +41,13 @@ export default {
     missionIntro: {
       badge: 'Unsere Mission',
       title: 'Drei Wege, Hoffnung zu schaffen',
-      description: 'Ob Nothilfe, Klimaschutz oder Bildung – jedes Projekt entsteht gemeinsam mit den Menschen vor Ort.'
+      description: 'Ob Nothilfe, Klimaschutz oder Bildung: Jedes Projekt entsteht gemeinsam mit den Menschen vor Ort.'
     },
     story: {
       badge: 'Warum Tumaini Jipya?',
-      title: 'Eine Brücke zwischen Duisburg und der DR Kongo',
-      p1: 'Tumaini Jipya heißt „Neue Hoffnung“ auf Swahili. Unser Verein wurde in Duisburg von Menschen gegründet, deren Wurzeln in der Demokratischen Republik Kongo liegen – und die beide Orte als Heimat verstehen.',
-      p2: 'Diese Verbindung prägt unsere Arbeit: Wir kennen die Menschen, die Sprache und die Bedürfnisse vor Ort. Was in der DR Kongo begann, gilt heute Menschen in Krisenregionen weltweit – immer Seite an Seite mit den Gemeinden.',
+      title: 'Hoffnung, die in Duisburg beginnt',
+      p1: 'Tumaini Jipya heißt „Neue Hoffnung“ auf Swahili. Unser Verein wurde in Duisburg von Menschen gegründet, die aus eigener Erfahrung wissen, was Krise, Flucht und Neuanfang bedeuten.',
+      p2: 'Dieses Verständnis prägt unsere Arbeit. Wir hören zu, bevor wir handeln, und entwickeln jedes Projekt Seite an Seite mit den Menschen vor Ort.',
       quote: 'Wir helfen nicht aus Mitleid, sondern aus Verbundenheit. Jedes Projekt ist ein Stück gemeinsame Zukunft.',
       quoteRole: '1. Vorsitzender',
       learnMore: 'Unsere Geschichte lesen'
@@ -60,12 +60,12 @@ export default {
     },
     contactStrip: {
       title: 'Bleiben Sie mit uns in Verbindung',
-      description: 'Erfahren Sie, was unsere Projekte bewirken, und begleiten Sie uns auf dem Weg – wir freuen uns auf Sie.',
+      description: 'Erfahren Sie, was unsere Projekte bewirken, und begleiten Sie uns auf dem Weg. Wir freuen uns auf Sie.',
       cta: 'Kontakt aufnehmen'
     },
     finalCta: {
       title: 'Ihre Unterstützung kommt an.',
-      description: 'Mit Ihrer Spende oder Mitgliedschaft schaffen wir gemeinsam neue Hoffnung – in Duisburg und in Krisenregionen weltweit.',
+      description: 'Mit Ihrer Spende oder Mitgliedschaft schaffen wir gemeinsam neue Hoffnung in Duisburg und in Krisenregionen weltweit.',
       donate: 'Jetzt spenden',
       membership: 'Mitglied werden',
       footnote: 'Gemeinnützig anerkannt · Spenden sind steuerlich absetzbar'
@@ -117,7 +117,7 @@ export default {
     datenschutz: 'Datenschutz',
     allRightsReserved: 'Alle Rechte vorbehalten',
     nonprofitRecognized: 'Gemeinnützig anerkannt',
-    missionSummary: 'Gemeinsam schaffen wir neue Hoffnung – mit humanitärer Hilfe, Klimaschutz und Bildung für Menschen in Krisenregionen weltweit.',
+    missionSummary: 'Gemeinsam schaffen wir neue Hoffnung: mit humanitärer Hilfe, Klimaschutz und Bildung für Menschen in Krisenregionen weltweit.',
     followUs: 'Folgen Sie uns',
     vereinsregister: {
       title: 'Vereinsregister',
