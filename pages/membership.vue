@@ -211,42 +211,25 @@
         </div>
         
         <!-- Contact CTA -->
-        <div class="bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-card text-center text-white">
-          <div>
-            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            
-            <h2 class="text-2xl sm:text-3xl font-bold mb-4">{{ $t('membership.questions.title') }}</h2>
-            <p class="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              {{ $t('membership.questions.description') }}
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <NuxtLink
-                to="/contact"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
-              >
-                <span>{{ $t('membership.questions.contactUs') }}</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </NuxtLink>
-
-              <a
-                :href="`mailto:${CONTACT_INFO.email}`"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-lg transition-all duration-300 text-base sm:text-lg"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                <span>{{ $t('membership.questions.sendEmail') }}</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <UiCtaBanner
+          :title="$t('membership.questions.title')"
+          :description="$t('membership.questions.description')"
+        >
+          <template #actions>
+            <NuxtLink
+              to="/contact"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent-400 px-8 py-4 text-base font-semibold text-accent-950 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-300 hover:shadow-xl sm:w-auto sm:text-lg"
+            >
+              {{ $t('membership.questions.contactUs') }}
+            </NuxtLink>
+            <a
+              :href="`mailto:${CONTACT_INFO.email}`"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/40 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-white/10 sm:w-auto sm:text-lg"
+            >
+              {{ $t('membership.questions.sendEmail') }}
+            </a>
+          </template>
+        </UiCtaBanner>
       </div>
     </div>
   </div>

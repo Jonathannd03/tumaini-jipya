@@ -85,31 +85,15 @@
             </div>
           </div>
   
-          <!-- Newsletter Signup -->
-          <div class="bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-card text-center text-white">
-            <div>
-              <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                </svg>
-              </div>
-              
-              <h2 class="text-2xl sm:text-3xl font-bold mb-4">{{ $t('donate.newsletter.title') }}</h2>
-              <p class="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                {{ $t('donate.newsletter.description') }}
-              </p>
-
-              <NuxtLink
-                to="/contact"
-                class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
-              >
-                <span>{{ $t('donate.newsletter.contactUs') }}</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </NuxtLink>
-            </div>
-          </div>
+          <!-- Stay informed CTA -->
+          <UiCtaBanner
+            :title="$t('donate.newsletter.title')"
+            :description="$t('donate.newsletter.description')"
+            :primary-text="$t('donate.newsletter.contactUs')"
+            primary-link="/contact"
+            :secondary-text="$t('nav.participate')"
+            secondary-link="/membership"
+          />
         </div>
       </div>
     </div>

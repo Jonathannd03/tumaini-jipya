@@ -175,29 +175,16 @@
       </section>
   
       <!-- CTA Section -->
-      <section class="py-12 sm:py-16 lg:py-20">
-        <div class="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-          <div class="bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 rounded-2xl p-8 sm:p-12 lg:p-16 shadow-card">
-            <div>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-                {{ $t('team.joinTeam') }}
-              </h2>
-              <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                {{ $t('team.joinDescription') }}
-              </p>
-              <NuxtLink
-                to="/membership"
-                class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-teal-700 hover:bg-emerald-50 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg"
-              >
-                <span>{{ $t('team.becomeMember') }}</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UiContentSection background="tinted" padding="tight">
+        <UiCtaBanner
+          :title="$t('team.joinTeam')"
+          :description="$t('team.joinDescription')"
+          :primary-text="$t('team.becomeMember')"
+          primary-link="/membership"
+          :secondary-text="$t('nav.contact')"
+          secondary-link="/contact"
+        />
+      </UiContentSection>
     </div>
   </template>
 

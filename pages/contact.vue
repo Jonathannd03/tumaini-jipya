@@ -57,7 +57,7 @@
           </div>
   
           <!-- Right Side - Contact Form -->
-          <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100">
+          <div class="bg-white rounded-2xl shadow-card p-8 lg:p-10 border border-gray-100">
             <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ $t('contact.form.send') }}</h3>
             
             <form @submit.prevent="handleSubmit" class="space-y-6">
