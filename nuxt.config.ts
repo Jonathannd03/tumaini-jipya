@@ -3,7 +3,18 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-09-12",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
+
+  // Fonts are downloaded at build time and self-hosted (GDPR: no request to Google at runtime)
+  googleFonts: {
+    families: {
+      Outfit: [500, 600, 700, 800],
+      Inter: [400, 500, 600, 700],
+    },
+    display: "swap",
+    download: true,
+    preload: true,
+  },
 
   // Hybrid rendering: static pages + serverless API routes
   routeRules: {
@@ -91,18 +102,7 @@ export default defineNuxtConfig({
           content: "e.V, Humanitäre Hilfe, Spenden",
         },
       ],
-      link: [
-        { rel: "icon", type: "image/png", href: "/images/logo.png" },
-        {
-          rel: "stylesheet",
-          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
-        },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
-        },
-      ],
+      link: [{ rel: "icon", type: "image/png", href: "/images/logo.png" }],
     },
   },
 });

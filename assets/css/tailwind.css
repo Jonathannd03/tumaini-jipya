@@ -9,17 +9,46 @@
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    @apply font-sans text-gray-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Visible focus for keyboard users (WCAG 2.4.7) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-600 ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-primary-100 text-primary-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer components {
-  .gradient-bg {
-    @apply bg-gradient-to-br from-primary-500 to-secondary-500;
-  }
-
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  /* Skip-to-content link: visually hidden until focused */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary-700 focus:px-4 focus:py-3 focus:font-semibold focus:text-white;
   }
 
   .glass-effect {
@@ -28,14 +57,6 @@
 
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
-  }
-
-  .btn-primary {
-    @apply gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity;
-  }
-
-  .btn-secondary {
-    @apply border-2 border-primary-500 text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all;
   }
 
   .card-hover {
