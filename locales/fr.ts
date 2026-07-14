@@ -17,6 +17,60 @@ export default {
     mainNavigation: 'Navigation principale',
     footerNavigation: 'Navigation du pied de page'
   },
+  home: {
+    seo: {
+      title: 'Tumaini Jipya e.V. – Un nouvel espoir, de Duisbourg à la RD Congo',
+      description: 'Association à but non lucratif de Duisbourg, fondée par la diaspora congolaise : aide humanitaire, protection du climat et éducation pour les enfants en RD Congo. Faites un don ou devenez membre.'
+    },
+    hero: {
+      badge: 'De Duisbourg. Pour les habitants de la RD Congo.',
+      title: 'Ensemble, nous créons un nouvel espoir.',
+      subline: 'Tumaini Jipya a été fondée à Duisbourg par des membres de la diaspora congolaise. Nous relions deux patries – par l\'aide humanitaire, la protection du climat et l\'éducation des enfants.',
+      donateNow: 'Faire un don',
+      becomeMember: 'Devenir membre',
+      trust1: 'Reconnu d\'utilité publique',
+      trust2: 'Utilisation transparente des fonds'
+    },
+    stats: {
+      title: 'Ce que nous accomplissons ensemble',
+      trees: 'arbres plantés',
+      children: 'enfants soutenus',
+      packages: 'colis d\'aide distribués',
+      volunteers: 'membres engagés'
+    },
+    missionIntro: {
+      badge: 'Notre mission',
+      title: 'Trois façons de créer l\'espoir',
+      description: 'Aide d\'urgence, protection du climat ou éducation – chaque projet naît avec les personnes sur place.'
+    },
+    story: {
+      badge: 'Pourquoi Tumaini Jipya ?',
+      title: 'Un pont entre Duisbourg et la RD Congo',
+      p1: 'Tumaini Jipya signifie « nouvel espoir » en swahili. Notre association a été fondée à Duisbourg par des personnes dont les racines se trouvent en République démocratique du Congo – et qui considèrent les deux lieux comme leur foyer.',
+      p2: 'Ce lien façonne notre travail : nous connaissons les gens, la langue et les besoins sur place. Nos projets ne se décident pas à la place des habitants, mais se construisent côte à côte avec les communautés.',
+      quote: 'Nous n\'aidons pas par pitié, mais par attachement. Chaque projet est un morceau d\'avenir partagé.',
+      quoteRole: 'Président',
+      learnMore: 'Découvrir notre histoire'
+    },
+    news: {
+      badge: 'Actualités',
+      title: 'Des nouvelles de nos projets',
+      description: 'Un aperçu de notre travail à Duisbourg et en RD Congo.',
+      comingSoon: 'Bientôt disponible'
+    },
+    contactStrip: {
+      title: 'Restons en contact',
+      description: 'Découvrez l\'impact de nos projets et accompagnez-nous sur ce chemin – nous serons ravis de vous lire.',
+      cta: 'Nous contacter'
+    },
+    finalCta: {
+      title: 'Votre soutien fait la différence.',
+      description: 'Grâce à votre don ou à votre adhésion, nous créons ensemble un nouvel espoir – à Duisbourg et en RD Congo.',
+      donate: 'Faire un don',
+      membership: 'Devenir membre',
+      footnote: 'Reconnu d\'utilité publique · Les dons sont déductibles des impôts'
+    }
+  },
   hero: {
     badge: 'Ensemble pour un avenir meilleur',
     title: 'Créer un nouvel',

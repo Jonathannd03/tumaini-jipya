@@ -17,6 +17,60 @@ export default {
     mainNavigation: 'Hauptnavigation',
     footerNavigation: 'Footer-Navigation'
   },
+  home: {
+    seo: {
+      title: 'Tumaini Jipya e.V. – Neue Hoffnung von Duisburg bis in die DR Kongo',
+      description: 'Gemeinnütziger Verein aus Duisburg, gegründet von der kongolesischen Diaspora: humanitäre Hilfe, Klimaschutz und Bildung für Kinder in der DR Kongo. Jetzt spenden oder Mitglied werden.'
+    },
+    hero: {
+      badge: 'Aus Duisburg. Für Menschen in der DR Kongo.',
+      title: 'Gemeinsam schaffen wir neue Hoffnung.',
+      subline: 'Tumaini Jipya wurde in Duisburg von Menschen aus der kongolesischen Diaspora gegründet. Wir verbinden zwei Heimaten – mit humanitärer Hilfe, Klimaschutz und Bildung für Kinder.',
+      donateNow: 'Jetzt spenden',
+      becomeMember: 'Mitglied werden',
+      trust1: 'Gemeinnützig anerkannt',
+      trust2: 'Transparente Mittelverwendung'
+    },
+    stats: {
+      title: 'Was wir gemeinsam bewegen',
+      trees: 'gepflanzte Bäume',
+      children: 'unterstützte Kinder',
+      packages: 'verteilte Hilfspakete',
+      volunteers: 'Engagierte im Verein'
+    },
+    missionIntro: {
+      badge: 'Unsere Mission',
+      title: 'Drei Wege, Hoffnung zu schaffen',
+      description: 'Ob Nothilfe, Klimaschutz oder Bildung – jedes Projekt entsteht gemeinsam mit den Menschen vor Ort.'
+    },
+    story: {
+      badge: 'Warum Tumaini Jipya?',
+      title: 'Eine Brücke zwischen Duisburg und der DR Kongo',
+      p1: 'Tumaini Jipya heißt „Neue Hoffnung“ auf Swahili. Unser Verein wurde in Duisburg von Menschen gegründet, deren Wurzeln in der Demokratischen Republik Kongo liegen – und die beide Orte als Heimat verstehen.',
+      p2: 'Diese Verbindung prägt unsere Arbeit: Wir kennen die Menschen, die Sprache und die Bedürfnisse vor Ort. Unsere Projekte entstehen nicht über die Köpfe der Menschen hinweg, sondern Seite an Seite mit den Gemeinden.',
+      quote: 'Wir helfen nicht aus Mitleid, sondern aus Verbundenheit. Jedes Projekt ist ein Stück gemeinsame Zukunft.',
+      quoteRole: '1. Vorsitzender',
+      learnMore: 'Unsere Geschichte lesen'
+    },
+    news: {
+      badge: 'Aktuelles',
+      title: 'Neuigkeiten aus unseren Projekten',
+      description: 'Einblicke in unsere Arbeit in Duisburg und der DR Kongo.',
+      comingSoon: 'Demnächst'
+    },
+    contactStrip: {
+      title: 'Bleiben Sie mit uns in Verbindung',
+      description: 'Erfahren Sie, was unsere Projekte bewirken, und begleiten Sie uns auf dem Weg – wir freuen uns auf Sie.',
+      cta: 'Kontakt aufnehmen'
+    },
+    finalCta: {
+      title: 'Ihre Unterstützung kommt an.',
+      description: 'Mit Ihrer Spende oder Mitgliedschaft schaffen wir gemeinsam neue Hoffnung – in Duisburg und in der DR Kongo.',
+      donate: 'Jetzt spenden',
+      membership: 'Mitglied werden',
+      footnote: 'Gemeinnützig anerkannt · Spenden sind steuerlich absetzbar'
+    }
+  },
   hero: {
     badge: 'Gemeinsam für eine bessere Zukunft',
     title: 'Neue Hoffnung',
