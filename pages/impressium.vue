@@ -93,17 +93,17 @@
             <div class="space-y-4 text-sm sm:text-base">
               <div>
                 <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.board.chair') }}</div>
-                <div class="text-gray-900">[Name des Vorsitzenden]</div>
+                <div class="text-gray-900">{{ BOARD_MEMBERS.chair }}</div>
               </div>
 
               <div>
                 <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.board.viceChair') }}</div>
-                <div class="text-gray-900">[Name des stellvertretenden Vorsitzenden]</div>
+                <div class="text-gray-900">{{ BOARD_MEMBERS.viceChair }}</div>
               </div>
 
               <div>
                 <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.board.treasurer') }}</div>
-                <div class="text-gray-900">[Name des Schatzmeisters]</div>
+                <div class="text-gray-900">{{ BOARD_MEMBERS.treasurer }}</div>
               </div>
             </div>
           </div>
@@ -225,5 +225,5 @@
   </template>
 
   <script setup>
-  const { ORGANIZATION, CONTACT_INFO } = useConstants();
+  const { ORGANIZATION, CONTACT_INFO, BOARD_MEMBERS } = useConstants();
   </script>

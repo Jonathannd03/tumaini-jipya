@@ -50,6 +50,12 @@ export const useConstants = () => {
     }
   };
 
+  const BOARD_MEMBERS = {
+    chair: 'Jonathan Ndinga',
+    viceChair: 'Julius Kadewa',
+    treasurer: 'Dorcas Nunes'
+  };
+
   const MISSION_AREAS = computed(() => [
     {
       id: 'humanitarian',
@@ -79,6 +85,7 @@ export const useConstants = () => {
     SOCIAL_LINKS,
     CONTACT_INFO,
     ORGANIZATION,
+    BOARD_MEMBERS,
     MISSION_AREAS
   };
 };

@@ -55,7 +55,7 @@
               </div>
               <div class="text-center">
                 <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  [Name]
+                  {{ BOARD_MEMBERS.chair }}
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
                   {{ $t('team.board.chair') }}
@@ -75,7 +75,7 @@
               </div>
               <div class="text-center">
                 <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  [Name]
+                  {{ BOARD_MEMBERS.viceChair }}
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
                   {{ $t('team.board.viceChair') }}
@@ -95,7 +95,7 @@
               </div>
               <div class="text-center">
                 <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  [Name]
+                  {{ BOARD_MEMBERS.treasurer }}
                 </h3>
                 <p class="text-teal-600 font-semibold mb-3 text-sm sm:text-base">
                   {{ $t('team.board.treasurer') }}
@@ -225,5 +225,5 @@
   </template>
 
   <script setup>
-  const { ORGANIZATION } = useConstants();
+  const { ORGANIZATION, BOARD_MEMBERS } = useConstants();
   </script>
