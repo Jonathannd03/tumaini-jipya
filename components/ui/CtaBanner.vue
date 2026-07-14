@@ -1,8 +1,6 @@
 <template>
-  <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 px-6 py-12 text-center text-white shadow-card sm:px-12 sm:py-16">
-    <UiPatternDivider variant="texture" tone="white" :opacity="0.08" />
-
-    <div class="relative mx-auto max-w-2xl">
+  <div class="rounded-2xl bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 px-6 py-12 text-center text-white shadow-card sm:px-12 sm:py-16">
+    <div class="mx-auto max-w-2xl">
       <h2 class="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
         <slot name="title">{{ title }}</slot>
       </h2>

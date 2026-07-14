@@ -1,10 +1,6 @@
 <template>
-  <section class="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-950 text-white">
-    <UiPatternDivider variant="texture" tone="white" :opacity="0.07" />
-    <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-accent-400/10 blur-3xl" aria-hidden="true"></div>
-    <div class="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-secondary-400/10 blur-3xl" aria-hidden="true"></div>
-
-    <div class="container relative mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
+  <section class="bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-950 text-white">
+    <div class="container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
       <div class="max-w-3xl">
         <!-- Badge -->
         <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm sm:mb-8">

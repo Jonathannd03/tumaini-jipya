@@ -1,8 +1,6 @@
 <template>
-  <footer class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-primary-950 text-white">
-    <UiPatternDivider variant="texture" tone="white" :opacity="0.04" />
-
-    <div class="container relative mx-auto px-4 py-10 sm:px-6 sm:py-14 lg:py-16">
+  <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-primary-950 text-white">
+    <div class="container mx-auto px-4 py-10 sm:px-6 sm:py-14 lg:py-16">
       <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
         <!-- Column 1: Mission summary + social -->
         <div>

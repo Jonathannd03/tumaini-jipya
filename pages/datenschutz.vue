@@ -1,12 +1,10 @@
 <template>
   <div>
-    <UiContentSection background="tinted" pattern padding="tight">
-      <UiSectionHeader
-        :badge="$t('datenschutz.badge')"
-        :title="$t('datenschutz.title')"
-        :description="$t('datenschutz.description')"
-      />
-    </UiContentSection>
+    <UiPageHero
+      :badge="$t('datenschutz.badge')"
+      :title="$t('datenschutz.title')"
+      :description="$t('datenschutz.description')"
+    />
 
     <UiContentSection>
       <!-- TODO: Have this privacy policy reviewed by a legal professional before launch -->

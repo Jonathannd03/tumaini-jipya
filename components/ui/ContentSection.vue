@@ -1,7 +1,6 @@
 <template>
-  <section :id="id || undefined" class="relative overflow-hidden" :class="[paddingClass, backgroundClass]">
-    <UiPatternDivider v-if="pattern" variant="texture" :tone="patternTone" :opacity="patternOpacity" />
-    <div class="container relative mx-auto px-4 sm:px-6">
+  <section :id="id || undefined" :class="[paddingClass, backgroundClass]">
+    <div class="container mx-auto px-4 sm:px-6">
       <slot />
     </div>
   </section>
@@ -19,11 +18,6 @@ const props = defineProps({
     type: String,
     default: 'white',
     validator: (value) => ['white', 'tinted', 'sand', 'dark'].includes(value)
-  },
-  // Overlay the wax-print texture on the section background
-  pattern: {
-    type: Boolean,
-    default: false
   },
   padding: {
     type: String,
@@ -50,7 +44,4 @@ const paddingClass = computed(() => {
   };
   return paddings[props.padding];
 });
-
-const patternTone = computed(() => (props.background === 'dark' ? 'white' : props.background === 'sand' ? 'sand' : 'teal'));
-const patternOpacity = computed(() => (props.background === 'dark' ? 0.08 : 0.06));
 </script>
