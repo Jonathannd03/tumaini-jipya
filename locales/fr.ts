@@ -32,11 +32,12 @@ export default {
       trust2: 'Utilisation transparente des fonds'
     },
     stats: {
-      title: 'Ce que nous accomplissons ensemble',
-      trees: 'arbres plantés',
-      children: 'enfants soutenus',
-      packages: 'colis d\'aide distribués',
-      volunteers: 'membres engagés'
+      title: 'Nos objectifs',
+      description: 'Voici ce que nous voulons accomplir ensemble avec nos premiers projets.',
+      trees: 'arbres à planter',
+      children: 'enfants à soutenir',
+      packages: 'colis d\'aide à distribuer',
+      volunteers: 'membres à nos côtés'
     },
     missionIntro: {
       badge: 'Notre mission',
@@ -150,10 +151,11 @@ export default {
     badge: 'Projets en cours',
     title: 'Où nous',
     titleHighlight: 'aidons',
-    description: 'Nos projets en cours font une vraie différence dans la vie des gens',
+    description: 'Voici les premiers projets que nous préparons. Chaque soutien nous rapproche du lancement.',
     inPlanning: 'En planification',
     progress: 'Progrès',
     beneficiaries: 'Bénéficiaires',
+    plannedBeneficiaries: 'Bénéficiaires prévus',
     details: 'Détails',
     viewAll: 'Voir tous les projets',
     comingSoon: 'Bientôt disponible',

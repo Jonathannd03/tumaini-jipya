@@ -1,11 +1,15 @@
 <template>
-  <section ref="sectionRef" class="border-b border-primary-100 bg-primary-50/60" :aria-label="$t('home.stats.title')">
+  <section ref="sectionRef" class="border-b border-primary-100 bg-primary-50/60">
     <div class="container mx-auto px-4 py-10 sm:px-6 sm:py-14">
-      <h2 class="sr-only">{{ $t('home.stats.title') }}</h2>
+      <div class="mb-8 text-center sm:mb-10">
+        <h2 class="mb-2 text-xl font-bold text-gray-900 sm:text-2xl">{{ $t('home.stats.title') }}</h2>
+        <p class="mx-auto max-w-xl text-sm text-gray-600 sm:text-base">{{ $t('home.stats.description') }}</p>
+      </div>
+
       <dl class="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
         <div v-for="(stat, index) in stats" :key="stat.key" class="text-center">
           <dd class="font-heading text-3xl font-bold text-primary-800 sm:text-4xl lg:text-5xl">
-            {{ formatNumber(displayValues[index]) }}<span class="text-accent-500">+</span>
+            {{ formatNumber(displayValues[index]) }}
           </dd>
           <dt class="mt-1 text-sm font-medium text-gray-600 sm:mt-2 sm:text-base">
             {{ $t(`home.stats.${stat.key}`) }}
@@ -21,7 +25,8 @@ import { ref, onMounted } from 'vue';
 
 const { locale } = useI18n();
 
-// TODO: Team must replace these placeholder impact numbers with real figures
+// Projected targets for the first projects, not achieved results.
+// TODO: Team must confirm these goal figures.
 const stats = [
   { key: 'trees', value: 1000 },
   { key: 'children', value: 150 },

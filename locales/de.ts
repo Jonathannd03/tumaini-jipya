@@ -32,11 +32,12 @@ export default {
       trust2: 'Transparente Mittelverwendung'
     },
     stats: {
-      title: 'Was wir gemeinsam bewegen',
-      trees: 'gepflanzte Bäume',
-      children: 'unterstützte Kinder',
-      packages: 'verteilte Hilfspakete',
-      volunteers: 'Engagierte im Verein'
+      title: 'Unsere Ziele',
+      description: 'Das wollen wir mit unseren ersten Projekten gemeinsam erreichen.',
+      trees: 'Bäume pflanzen',
+      children: 'Kinder unterstützen',
+      packages: 'Hilfspakete verteilen',
+      volunteers: 'Engagierte gewinnen'
     },
     missionIntro: {
       badge: 'Unsere Mission',
@@ -150,10 +151,11 @@ export default {
     badge: 'Aktuelle Projekte',
     title: 'Wo wir',
     titleHighlight: 'helfen',
-    description: 'Unsere laufenden Projekte machen einen echten Unterschied im Leben der Menschen',
-    inPlanning: 'In Plannung',
+    description: 'Diese Projekte planen wir als Erstes. Jede Unterstützung bringt uns dem Start näher.',
+    inPlanning: 'In Planung',
     progress: 'Fortschritt',
     beneficiaries: 'Begünstigte',
+    plannedBeneficiaries: 'Geplante Begünstigte',
     details: 'Details',
     viewAll: 'Alle Projekte ansehen',
     comingSoon: 'Demnächst verfügbar',
