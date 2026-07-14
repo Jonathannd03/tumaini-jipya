@@ -8,6 +8,7 @@ export const useConstants = () => {
     { label: t('nav.home'), href: '/' },
     { label: t('nav.aboutUs'), href: '/about-us' },
     { label: t('nav.projects'), href: '/projects' },
+    { label: t('nav.team'), href: '/team' },
     { label: t('nav.membership'), href: '/membership' },
     { label: t('nav.contact'), href: '/contact' }
   ]);

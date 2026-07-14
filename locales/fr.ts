@@ -19,13 +19,13 @@ export default {
   },
   home: {
     seo: {
-      title: 'Tumaini Jipya e.V. – Un nouvel espoir, de Duisbourg à la RD Congo',
-      description: 'Association à but non lucratif de Duisbourg, fondée par la diaspora congolaise : aide humanitaire, protection du climat et éducation pour les enfants en RD Congo. Faites un don ou devenez membre.'
+      title: 'Tumaini Jipya e.V. – Un nouvel espoir pour les personnes dans les régions en crise',
+      description: 'Association à but non lucratif de Duisbourg, fondée par la diaspora congolaise : aide humanitaire, protection du climat et éducation pour les personnes dans les régions en crise du monde entier. Faites un don ou devenez membre.'
     },
     hero: {
-      badge: 'De Duisbourg. Pour les habitants de la RD Congo.',
+      badge: 'De Duisbourg. Pour les personnes dans les régions en crise.',
       title: 'Ensemble, nous créons un nouvel espoir.',
-      subline: 'Tumaini Jipya a été fondée à Duisbourg par des membres de la diaspora congolaise. Nous relions deux patries – par l\'aide humanitaire, la protection du climat et l\'éducation des enfants.',
+      subline: 'Tumaini Jipya a été fondée à Duisbourg par des membres de la diaspora congolaise. Aujourd\'hui, nous créons de l\'espoir là où il est le plus nécessaire – par l\'aide humanitaire, la protection du climat et l\'éducation dans les régions en crise du monde entier.',
       donateNow: 'Faire un don',
       becomeMember: 'Devenir membre',
       trust1: 'Reconnu d\'utilité publique',
@@ -47,7 +47,7 @@ export default {
       badge: 'Pourquoi Tumaini Jipya ?',
       title: 'Un pont entre Duisbourg et la RD Congo',
       p1: 'Tumaini Jipya signifie « nouvel espoir » en swahili. Notre association a été fondée à Duisbourg par des personnes dont les racines se trouvent en République démocratique du Congo – et qui considèrent les deux lieux comme leur foyer.',
-      p2: 'Ce lien façonne notre travail : nous connaissons les gens, la langue et les besoins sur place. Nos projets ne se décident pas à la place des habitants, mais se construisent côte à côte avec les communautés.',
+      p2: 'Ce lien façonne notre travail : nous connaissons les gens, la langue et les besoins sur place. Ce qui a commencé en RD Congo s\'adresse aujourd\'hui aux personnes dans les régions en crise du monde entier – toujours côte à côte avec les communautés.',
       quote: 'Nous n\'aidons pas par pitié, mais par attachement. Chaque projet est un morceau d\'avenir partagé.',
       quoteRole: 'Président',
       learnMore: 'Découvrir notre histoire'
@@ -55,7 +55,7 @@ export default {
     news: {
       badge: 'Actualités',
       title: 'Des nouvelles de nos projets',
-      description: 'Un aperçu de notre travail à Duisbourg et en RD Congo.',
+      description: 'Un aperçu de notre travail à Duisbourg et dans nos régions de projet.',
       comingSoon: 'Bientôt disponible'
     },
     contactStrip: {
@@ -65,7 +65,7 @@ export default {
     },
     finalCta: {
       title: 'Votre soutien fait la différence.',
-      description: 'Grâce à votre don ou à votre adhésion, nous créons ensemble un nouvel espoir – à Duisbourg et en RD Congo.',
+      description: 'Grâce à votre don ou à votre adhésion, nous créons ensemble un nouvel espoir – à Duisbourg et dans les régions en crise du monde entier.',
       donate: 'Faire un don',
       membership: 'Devenir membre',
       footnote: 'Reconnu d\'utilité publique · Les dons sont déductibles des impôts'
@@ -117,7 +117,7 @@ export default {
     datenschutz: 'Politique de confidentialité',
     allRightsReserved: 'Tous droits réservés',
     nonprofitRecognized: 'Reconnu d\'utilité publique',
-    missionSummary: 'Ensemble, nous créons un nouvel espoir – en reliant Duisbourg et la RD Congo par l\'aide humanitaire, la protection du climat et l\'éducation.',
+    missionSummary: 'Ensemble, nous créons un nouvel espoir – par l\'aide humanitaire, la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier.',
     followUs: 'Suivez-nous',
     vereinsregister: {
       title: 'Registre des associations',

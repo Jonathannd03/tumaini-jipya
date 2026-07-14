@@ -19,13 +19,13 @@ export default {
   },
   home: {
     seo: {
-      title: 'Tumaini Jipya e.V. – New hope from Duisburg to the DR Congo',
-      description: 'Non-profit association from Duisburg, founded by the Congolese diaspora: humanitarian aid, climate protection, and education for children in the DR Congo. Donate or become a member today.'
+      title: 'Tumaini Jipya e.V. – New hope for people in crisis regions',
+      description: 'Non-profit association from Duisburg, founded by the Congolese diaspora: humanitarian aid, climate protection, and education for people in crisis regions worldwide. Donate or become a member today.'
     },
     hero: {
-      badge: 'From Duisburg. For people in the DR Congo.',
+      badge: 'From Duisburg. For people in crisis regions.',
       title: 'Together, we create new hope.',
-      subline: 'Tumaini Jipya was founded in Duisburg by members of the Congolese diaspora. We connect two homes – through humanitarian aid, climate protection, and education for children.',
+      subline: 'Tumaini Jipya was founded in Duisburg by members of the Congolese diaspora. Today we create hope where it is needed most – through humanitarian aid, climate protection, and education in crisis regions worldwide.',
       donateNow: 'Donate now',
       becomeMember: 'Become a member',
       trust1: 'Recognized non-profit',
@@ -47,7 +47,7 @@ export default {
       badge: 'Why Tumaini Jipya?',
       title: 'A bridge between Duisburg and the DR Congo',
       p1: 'Tumaini Jipya means "new hope" in Swahili. Our association was founded in Duisburg by people whose roots lie in the Democratic Republic of the Congo – and who call both places home.',
-      p2: 'This connection shapes our work: we know the people, the language, and the needs on the ground. Our projects are not decided over people\'s heads, but built side by side with the communities.',
+      p2: 'This connection shapes our work: we know the people, the language, and the needs on the ground. What began in the DR Congo now reaches people in crisis regions worldwide – always side by side with the communities.',
       quote: 'We don\'t help out of pity, but out of connection. Every project is a piece of shared future.',
       quoteRole: 'Chairman',
       learnMore: 'Read our story'
@@ -55,7 +55,7 @@ export default {
     news: {
       badge: 'News',
       title: 'Updates from our projects',
-      description: 'Insights into our work in Duisburg and the DR Congo.',
+      description: 'Insights into our work in Duisburg and our project regions.',
       comingSoon: 'Coming soon'
     },
     contactStrip: {
@@ -65,7 +65,7 @@ export default {
     },
     finalCta: {
       title: 'Your support makes a difference.',
-      description: 'With your donation or membership, together we create new hope – in Duisburg and in the DR Congo.',
+      description: 'With your donation or membership, together we create new hope – in Duisburg and in crisis regions worldwide.',
       donate: 'Donate now',
       membership: 'Become a member',
       footnote: 'Recognized non-profit · Donations are tax-deductible'
@@ -117,7 +117,7 @@ export default {
     datenschutz: 'Privacy Policy',
     allRightsReserved: 'All rights reserved',
     nonprofitRecognized: 'Recognized non-profit',
-    missionSummary: 'Together we create new hope – connecting Duisburg and the DR Congo through humanitarian aid, climate protection, and education.',
+    missionSummary: 'Together we create new hope – through humanitarian aid, climate protection, and education for people in crisis regions worldwide.',
     followUs: 'Follow us',
     vereinsregister: {
       title: 'Register of Associations',
