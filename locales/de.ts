@@ -23,7 +23,7 @@ export default {
       description: 'Tumaini Jipya ist ein gemeinnütziger Verein aus Duisburg. Wir leisten humanitäre Hilfe und fördern Klimaschutz und Bildung für Menschen in Krisenregionen weltweit. Jetzt spenden oder Mitglied werden.'
     },
     hero: {
-      badge: 'Aus Duisburg. Für Menschen in Krisenregionen.',
+      badge: 'Aus Deutschland. Für Menschen in Krisenregionen.',
       title: 'Gemeinsam schaffen wir neue Hoffnung.',
       subline: 'Tumaini Jipya ist ein gemeinnütziger Verein aus Duisburg. Wir schaffen Hoffnung, wo sie am dringendsten gebraucht wird: mit humanitärer Hilfe, Klimaschutz und Bildung für Menschen in Krisenregionen weltweit.',
       donateNow: 'Jetzt spenden',

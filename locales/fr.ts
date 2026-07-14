@@ -23,7 +23,7 @@ export default {
       description: 'Tumaini Jipya est une association à but non lucratif de Duisbourg. Nous apportons une aide humanitaire et soutenons la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier. Faites un don ou devenez membre.'
     },
     hero: {
-      badge: 'De Duisbourg. Pour les personnes dans les régions en crise.',
+      badge: "De L'Allemagne. Pour les personnes dans les régions en crise.",
       title: 'Ensemble, nous créons un nouvel espoir.',
       subline: 'Tumaini Jipya est une association à but non lucratif de Duisbourg. Nous créons de l\'espoir là où il est le plus nécessaire : par l\'aide humanitaire, la protection du climat et l\'éducation pour les personnes dans les régions en crise du monde entier.',
       donateNow: 'Faire un don',

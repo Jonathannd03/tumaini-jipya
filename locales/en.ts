@@ -23,7 +23,7 @@ export default {
       description: 'Tumaini Jipya is a non-profit association from Duisburg. We provide humanitarian aid and support climate protection and education for people in crisis regions worldwide. Donate or become a member today.'
     },
     hero: {
-      badge: 'From Duisburg. For people in crisis regions.',
+      badge: 'From Germany. For people in crisis regions.',
       title: 'Together, we create new hope.',
       subline: 'Tumaini Jipya is a non-profit association from Duisburg. We create hope where it is needed most: through humanitarian aid, climate protection, and education for people in crisis regions worldwide.',
       donateNow: 'Donate now',
