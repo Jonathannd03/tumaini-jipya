@@ -1,6 +1,18 @@
 <template>
-  <section class="bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-950 text-white">
-    <div class="container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
+  <section class="relative overflow-hidden bg-primary-900 text-white">
+    <!-- Background photo with brand overlay for text contrast.
+         TODO: Replace hope_bg.jpg with a higher-resolution version (currently 520x260) -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <img
+        src="/images/hope_bg.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+        fetchpriority="high"
+      >
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-900/80 to-secondary-950/90"></div>
+    </div>
+
+    <div class="container relative mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
       <div class="max-w-3xl">
         <!-- Badge -->
         <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm sm:mb-8">
