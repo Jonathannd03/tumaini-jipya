@@ -6,7 +6,16 @@ export default {
     membership: 'Adhésion',
     contact: 'Contact',
     donate: 'Faire un don',
-    participate: 'Participer'
+    participate: 'Participer',
+    team: 'Équipe',
+    blog: 'Blog'
+  },
+  a11y: {
+    skipToContent: 'Aller au contenu',
+    openMenu: 'Ouvrir le menu',
+    closeMenu: 'Fermer le menu',
+    mainNavigation: 'Navigation principale',
+    footerNavigation: 'Navigation du pied de page'
   },
   hero: {
     badge: 'Ensemble pour un avenir meilleur',
@@ -48,11 +57,19 @@ export default {
   },
   footer: {
     quickLinks: 'Liens rapides',
-    legal: 'Mentions légales',
+    legal: 'Informations légales',
     contact: 'Contact',
     impressum: 'Mentions légales',
+    datenschutz: 'Politique de confidentialité',
     allRightsReserved: 'Tous droits réservés',
-    nonprofitRecognized: 'Reconnu d\'utilité publique'
+    nonprofitRecognized: 'Reconnu d\'utilité publique',
+    missionSummary: 'Ensemble, nous créons un nouvel espoir – en reliant Duisbourg et la RD Congo par l\'aide humanitaire, la protection du climat et l\'éducation.',
+    followUs: 'Suivez-nous',
+    vereinsregister: {
+      title: 'Registre des associations',
+      court: 'Tribunal d\'enregistrement',
+      number: 'Numéro d\'enregistrement'
+    }
   },
   aboutUs: {
     badge: 'À propos de nous',
@@ -306,6 +323,32 @@ export default {
       notParticipating: 'Nous ne sommes ni disposés ni obligés de participer à des procédures de règlement des litiges devant un comité d\'arbitrage de consommation.'
     },
     backToHome: 'Retour à l\'accueil'
+  },
+  datenschutz: {
+    badge: 'Informations légales',
+    title: 'Politique de confidentialité',
+    description: 'Informations sur le traitement de vos données personnelles conformément à l\'art. 13 du RGPD',
+    responsible: {
+      title: 'Responsable du traitement',
+      text: 'Le conseil d\'administration de Tumaini Jipya e.V. est responsable du traitement des données sur ce site. Vous pouvez nous joindre par e-mail ou par courrier à l\'adresse indiquée dans les mentions légales.'
+    },
+    hosting: {
+      title: 'Hébergement',
+      text: 'Ce site est hébergé par Vercel Inc. Lors de la consultation des pages, des données techniquement nécessaires (par ex. adresse IP, date et heure de l\'accès, page consultée) sont traitées dans des fichiers journaux du serveur. Ce traitement repose sur l\'art. 6, par. 1, point f) du RGPD afin d\'assurer le bon fonctionnement du site.'
+    },
+    contactForm: {
+      title: 'Formulaire de contact',
+      text: 'Si vous nous contactez via le formulaire de contact, nous traitons les données que vous fournissez (nom, adresse e-mail, numéro de téléphone le cas échéant, objet et message) uniquement pour traiter votre demande. L\'envoi est effectué via le prestataire Resend. La base juridique est l\'art. 6, par. 1, point b) ou f) du RGPD. Vos données sont supprimées dès qu\'elles ne sont plus nécessaires au traitement de votre demande.'
+    },
+    cookies: {
+      title: 'Cookies',
+      text: 'Ce site utilise uniquement un cookie techniquement nécessaire pour enregistrer votre préférence linguistique (i18n_locale). Aucun suivi ni aucune analyse de votre comportement de navigation n\'est effectué.'
+    },
+    rights: {
+      title: 'Vos droits',
+      text: 'Vous disposez d\'un droit d\'accès, de rectification, d\'effacement et de limitation du traitement de vos données personnelles, ainsi que d\'un droit d\'opposition et d\'un droit à la portabilité des données. Vous avez également le droit d\'introduire une réclamation auprès d\'une autorité de contrôle de la protection des données.'
+    },
+    questions: 'Pour toute question relative à la protection des données, vous pouvez nous joindre à'
   },
   common: {
     readMore: 'Lire la suite',

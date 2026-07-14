@@ -42,7 +42,12 @@ export const useConstants = () => {
   const ORGANIZATION = {
     name: 'Tumaini Jipya e.V.',
     fullName: 'Tumaini Jipya',
-    logoPath: '/images/logo.png'
+    logoPath: '/images/logo.png',
+    register: {
+      // TODO: Team must fill in the actual Vereinsregister details
+      court: 'Amtsgericht Duisburg',
+      number: 'VR XXXXX'
+    }
   };
 
   const MISSION_AREAS = computed(() => [

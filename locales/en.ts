@@ -6,7 +6,16 @@ export default {
     membership: 'Membership',
     contact: 'Contact',
     donate: 'Donate',
-    participate: 'Get Involved'
+    participate: 'Get Involved',
+    team: 'Team',
+    blog: 'Blog'
+  },
+  a11y: {
+    skipToContent: 'Skip to content',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    mainNavigation: 'Main navigation',
+    footerNavigation: 'Footer navigation'
   },
   hero: {
     badge: 'Together for a better future',
@@ -51,8 +60,16 @@ export default {
     legal: 'Legal',
     contact: 'Contact',
     impressum: 'Imprint',
+    datenschutz: 'Privacy Policy',
     allRightsReserved: 'All rights reserved',
-    nonprofitRecognized: 'Recognized non-profit'
+    nonprofitRecognized: 'Recognized non-profit',
+    missionSummary: 'Together we create new hope – connecting Duisburg and the DR Congo through humanitarian aid, climate protection, and education.',
+    followUs: 'Follow us',
+    vereinsregister: {
+      title: 'Register of Associations',
+      court: 'Register court',
+      number: 'Register number'
+    }
   },
   aboutUs: {
     badge: 'About Us',
@@ -306,6 +323,32 @@ export default {
       notParticipating: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.'
     },
     backToHome: 'Back to home'
+  },
+  datenschutz: {
+    badge: 'Legal Information',
+    title: 'Privacy Policy',
+    description: 'Information about the processing of your personal data in accordance with Art. 13 GDPR',
+    responsible: {
+      title: 'Controller',
+      text: 'The board of Tumaini Jipya e.V. is responsible for data processing on this website. You can reach us by email or by post at the address given in the imprint.'
+    },
+    hosting: {
+      title: 'Hosting',
+      text: 'This website is hosted by Vercel Inc. When you visit our pages, technically necessary data (e.g. IP address, date and time of access, page visited) is processed in server log files. This processing is based on Art. 6 (1) (f) GDPR to ensure reliable operation of the site.'
+    },
+    contactForm: {
+      title: 'Contact Form',
+      text: 'If you contact us via the contact form, we process the data you provide (name, email address, phone number if given, subject, and message) solely to handle your enquiry. Messages are sent via the service provider Resend. The legal basis is Art. 6 (1) (b) or (f) GDPR. Your data is deleted as soon as it is no longer required to process your enquiry.'
+    },
+    cookies: {
+      title: 'Cookies',
+      text: 'This website only uses one technically necessary cookie to store your language preference (i18n_locale). There is no tracking and no analysis of your usage behaviour.'
+    },
+    rights: {
+      title: 'Your Rights',
+      text: 'You have the right to access, rectify, erase, and restrict the processing of your personal data, as well as the right to object and the right to data portability. You also have the right to lodge a complaint with a data protection supervisory authority.'
+    },
+    questions: 'If you have any questions about data protection, you can reach us at'
   },
   common: {
     readMore: 'Read more',

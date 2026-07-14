@@ -6,7 +6,16 @@ export default {
     membership: 'Mitgliedschaft',
     contact: 'Kontakt',
     donate: 'Spenden',
-    participate: 'Mitmachen'
+    participate: 'Mitmachen',
+    team: 'Team',
+    blog: 'Blog'
+  },
+  a11y: {
+    skipToContent: 'Zum Inhalt springen',
+    openMenu: 'Menü öffnen',
+    closeMenu: 'Menü schließen',
+    mainNavigation: 'Hauptnavigation',
+    footerNavigation: 'Footer-Navigation'
   },
   hero: {
     badge: 'Gemeinsam für eine bessere Zukunft',
@@ -51,8 +60,16 @@ export default {
     legal: 'Rechtliches',
     contact: 'Kontakt',
     impressum: 'Impressum',
+    datenschutz: 'Datenschutz',
     allRightsReserved: 'Alle Rechte vorbehalten',
-    nonprofitRecognized: 'Gemeinnützig anerkannt'
+    nonprofitRecognized: 'Gemeinnützig anerkannt',
+    missionSummary: 'Gemeinsam schaffen wir neue Hoffnung – mit humanitärer Hilfe, Klimaschutz und Bildung verbinden wir Duisburg mit der DR Kongo.',
+    followUs: 'Folgen Sie uns',
+    vereinsregister: {
+      title: 'Vereinsregister',
+      court: 'Registergericht',
+      number: 'Registernummer'
+    }
   },
   aboutUs: {
     badge: 'Über uns',
@@ -306,6 +323,32 @@ export default {
       notParticipating: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.'
     },
     backToHome: 'Zurück zur Startseite'
+  },
+  datenschutz: {
+    badge: 'Rechtliche Informationen',
+    title: 'Datenschutzerklärung',
+    description: 'Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemäß Art. 13 DSGVO',
+    responsible: {
+      title: 'Verantwortlicher',
+      text: 'Verantwortlich für die Datenverarbeitung auf dieser Website ist der Vorstand des Tumaini Jipya e.V. Sie erreichen uns per E-Mail oder postalisch unter der im Impressum angegebenen Adresse.'
+    },
+    hosting: {
+      title: 'Hosting',
+      text: 'Diese Website wird bei Vercel Inc. gehostet. Beim Aufruf der Seiten werden technisch notwendige Daten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite) in Server-Logfiles verarbeitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zur Sicherstellung eines störungsfreien Betriebs.'
+    },
+    contactForm: {
+      title: 'Kontaktformular',
+      text: 'Wenn Sie uns über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, ggf. Telefonnummer, Betreff und Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage. Der Versand erfolgt über den Dienstleister Resend. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Ihre Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind.'
+    },
+    cookies: {
+      title: 'Cookies',
+      text: 'Diese Website verwendet ausschließlich ein technisch notwendiges Cookie zur Speicherung Ihrer Spracheinstellung (i18n_locale). Es findet kein Tracking und keine Analyse Ihres Nutzungsverhaltens statt.'
+    },
+    rights: {
+      title: 'Ihre Rechte',
+      text: 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie ein Widerspruchsrecht und das Recht auf Datenübertragbarkeit. Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'
+    },
+    questions: 'Bei Fragen zum Datenschutz erreichen Sie uns unter'
   },
   common: {
     readMore: 'Weiterlesen',
