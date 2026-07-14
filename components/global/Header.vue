@@ -1,74 +1,75 @@
 <template>
-  <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+  <header
+    class="sticky top-0 z-50 transition-all duration-300"
+    :class="isScrolled ? 'border-b border-gray-100 bg-white/95 shadow-soft backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'"
+  >
     <div class="container mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center py-3 sm:py-4">
+      <div class="flex items-center justify-between py-3 sm:py-4">
         <!-- Logo Section -->
-        <NuxtLink to="/" class="flex items-center gap-2 sm:gap-3 flex-shrink min-w-0">
-          <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="h-8 w-8 sm:h-12 sm:w-12 object-contain flex-shrink-0">
-          <div class="flex flex-col min-w-0">
-            <span class="text-base sm:text-xl font-bold text-teal-700 leading-tight">{{ ORGANIZATION.fullName }}</span>
-            <span class="text-xs text-gray-700 font-medium">e.V.</span>
+        <NuxtLink to="/" class="flex min-w-0 flex-shrink items-center gap-2 rounded-lg sm:gap-3">
+          <img
+            :src="ORGANIZATION.logoPath"
+            :alt="`${ORGANIZATION.fullName} Logo`"
+            class="h-8 w-8 flex-shrink-0 object-contain sm:h-12 sm:w-12"
+            width="48"
+            height="48"
+          >
+          <div class="flex min-w-0 flex-col">
+            <span class="font-heading text-base font-bold leading-tight text-primary-800 sm:text-xl">{{ ORGANIZATION.fullName }}</span>
+            <span class="text-xs font-medium text-gray-700">e.V.</span>
           </div>
         </NuxtLink>
-        
-        <!-- Desktop Navigation - visible on tablets and up -->
-        <nav class="hidden md:block">
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block" :aria-label="$t('a11y.mainNavigation')">
           <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
             <li v-for="link in NAVIGATION_LINKS" :key="link.href">
               <NuxtLink
                 :to="link.href"
-                class="text-gray-700 hover:text-teal-700 font-medium transition-colors text-sm lg:text-base"
+                class="rounded-md text-sm font-medium text-gray-700 transition-colors hover:text-primary-700 lg:text-base"
+                active-class="text-primary-700 font-semibold"
+                :aria-current="route.path === link.href ? 'page' : undefined"
               >
                 {{ link.label }}
               </NuxtLink>
             </li>
           </ul>
         </nav>
-        
+
         <!-- Action Buttons -->
         <div class="flex items-center gap-2 sm:gap-3">
           <!-- Language Switcher - compact on mobile, full on desktop -->
-          <div>
-            <UiLanguageSwitcher />
-          </div>
+          <UiLanguageSwitcher />
 
-          <!-- Desktop Donate Button -->
-          <NuxtLink to="/donate"
-            class="hidden sm:inline-flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold rounded-lg transition-all duration-300 text-sm lg:text-base"
-          >
-            <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-            <span class="hidden md:inline">{{ $t('nav.donate') }}</span>
-          </NuxtLink>
-
-          <!-- Mobile Donate Button (Icon only) -->
-          <button
-            class="sm:hidden inline-flex items-center justify-center p-2 border-2 border-teal-600 text-teal-700 hover:bg-teal-50 rounded-lg transition-all duration-300"
+          <!-- Donate Button (warm accent) -->
+          <NuxtLink
+            to="/donate"
+            class="inline-flex items-center gap-1.5 rounded-xl bg-accent-400 p-2 font-semibold text-accent-950 shadow-md transition-all duration-300 hover:bg-accent-300 hover:shadow-lg sm:gap-2 sm:px-4 sm:py-2 lg:px-5 lg:py-2.5"
             :aria-label="$t('nav.donate')"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-5 w-5 lg:h-5 lg:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
             </svg>
-          </button>
-
-          <!-- Mitmachen Button -->
-          <NuxtLink to="/membership"
-            class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-5 py-2 lg:py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm lg:text-base"
-          >
-            <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-            <span class="hidden sm:inline">{{ $t('nav.participate') }}</span>
+            <span class="hidden text-sm sm:inline lg:text-base">{{ $t('nav.donate') }}</span>
           </NuxtLink>
 
-          <!-- Mobile Menu Button - only on mobile screens -->
-          <button
-            class="md:hidden p-2 text-gray-600 hover:text-teal-700 hover:bg-gray-100 rounded-lg transition-colors"
-            @click="toggleMobileMenu"
-            aria-label="Menu"
+          <!-- Membership Button (desktop only) -->
+          <NuxtLink
+            to="/membership"
+            class="hidden items-center gap-2 rounded-xl border-2 border-primary-600 px-4 py-2 text-sm font-semibold text-primary-700 transition-all duration-300 hover:bg-primary-50 md:inline-flex lg:px-5 lg:py-2.5 lg:text-base"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {{ $t('nav.participate') }}
+          </NuxtLink>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-primary-700 md:hidden"
+            :aria-label="$t('a11y.openMenu')"
+            :aria-expanded="mobileMenuOpen"
+            aria-controls="mobile-menu"
+            @click="openMobileMenu"
+          >
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
@@ -76,63 +77,130 @@
       </div>
     </div>
 
-    <!-- Mobile Menu - only on mobile screens -->
-    <div
-      v-if="mobileMenuOpen"
-      class="md:hidden border-t border-gray-100 bg-white"
+    <!-- Mobile Menu: full-screen overlay (teleported: the header's backdrop-blur
+         creates a containing block that would trap position:fixed) -->
+    <Teleport to="body">
+    <Transition
+      enter-active-class="transition ease-out duration-200"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition ease-in duration-150"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
     >
-      <nav class="container mx-auto px-4 sm:px-6 py-4">
-        <ul class="space-y-2">
-          <li v-for="link in NAVIGATION_LINKS" :key="link.href">
-            <NuxtLink
-              :to="link.href"
-              class="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg font-medium transition-colors"
-              @click="mobileMenuOpen = false"
-            >
-              {{ link.label }}
-            </NuxtLink>
-          </li>
-        </ul>
-
-        <!-- Mobile Menu Actions -->
-        <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
-          <NuxtLink to="/donate"
-            class="w-full flex items-center justify-center gap-2 px-4 py-3 border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold rounded-lg transition-all duration-300"
-            @click="mobileMenuOpen = false"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-            {{ $t('nav.donate') }}
+      <div
+        v-if="mobileMenuOpen"
+        id="mobile-menu"
+        class="fixed inset-0 z-50 flex flex-col bg-white md:hidden"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="$t('a11y.mainNavigation')"
+      >
+        <!-- Overlay header: logo + close -->
+        <div class="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
+          <NuxtLink to="/" class="flex items-center gap-2" @click="closeMobileMenu">
+            <img :src="ORGANIZATION.logoPath" :alt="`${ORGANIZATION.fullName} Logo`" class="h-8 w-8 object-contain" width="32" height="32">
+            <span class="font-heading text-base font-bold text-primary-800">{{ ORGANIZATION.fullName }}</span>
           </NuxtLink>
-
-          <NuxtLink to="/membership"
-            class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            @click="mobileMenuOpen = false"
+          <button
+            ref="closeButtonRef"
+            class="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-primary-700"
+            :aria-label="$t('a11y.closeMenu')"
+            @click="closeMobileMenu"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
-            {{ $t('nav.participate') }}
-          </NuxtLink>
-
-          <!-- Mobile Language Switcher -->
-          <div class="flex justify-center pt-2">
-            <UiLanguageSwitcher />
-          </div>
+          </button>
         </div>
-      </nav>
-    </div>
+
+        <!-- Overlay nav: large tap targets -->
+        <nav class="container mx-auto flex-1 overflow-y-auto px-4 py-6 sm:px-6" :aria-label="$t('a11y.mainNavigation')">
+          <ul class="space-y-1">
+            <li v-for="link in NAVIGATION_LINKS" :key="link.href">
+              <NuxtLink
+                :to="link.href"
+                class="block rounded-xl px-4 py-4 text-lg font-medium text-gray-800 transition-colors hover:bg-primary-50 hover:text-primary-700"
+                active-class="bg-primary-50 text-primary-700"
+                :aria-current="route.path === link.href ? 'page' : undefined"
+                @click="closeMobileMenu"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+
+          <div class="mt-6 space-y-3 border-t border-gray-100 pt-6">
+            <NuxtLink
+              to="/donate"
+              class="flex w-full items-center justify-center gap-2 rounded-xl bg-accent-400 px-4 py-4 text-lg font-semibold text-accent-950 shadow-md transition-all duration-300 hover:bg-accent-300"
+              @click="closeMobileMenu"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+              {{ $t('nav.donate') }}
+            </NuxtLink>
+
+            <NuxtLink
+              to="/membership"
+              class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary-600 px-4 py-4 text-lg font-semibold text-primary-700 transition-all duration-300 hover:bg-primary-50"
+              @click="closeMobileMenu"
+            >
+              {{ $t('nav.participate') }}
+            </NuxtLink>
+          </div>
+        </nav>
+      </div>
+    </Transition>
+    </Teleport>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue';
 
 const { NAVIGATION_LINKS, ORGANIZATION } = useConstants();
-const mobileMenuOpen = ref(false);
+const route = useRoute();
 
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
+const mobileMenuOpen = ref(false);
+const closeButtonRef = ref(null);
+const isScrolled = ref(false);
+
+const openMobileMenu = async () => {
+  mobileMenuOpen.value = true;
+  await nextTick();
+  closeButtonRef.value?.focus();
 };
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false;
+};
+
+// Lock body scroll while the overlay is open
+watch(mobileMenuOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+const onScroll = () => {
+  isScrolled.value = window.scrollY > 8;
+};
+
+const onKeydown = (event) => {
+  if (event.key === 'Escape' && mobileMenuOpen.value) {
+    closeMobileMenu();
+  }
+};
+
+onMounted(() => {
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('keydown', onKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll);
+  document.removeEventListener('keydown', onKeydown);
+  document.body.style.overflow = '';
+});
 </script>
