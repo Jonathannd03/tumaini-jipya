@@ -1,30 +1,10 @@
 <template>
     <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <!-- Hero Section -->
-      <section class="relative bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-        </div>
-        <div class="absolute top-20 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-        
-        <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 relative">
-          <div class="max-w-4xl">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-4 sm:mb-6">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-              </svg>
-              <span class="text-sm font-medium">{{ $t('impressum.badge') }}</span>
-            </div>
-
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-              {{ $t('impressum.title') }}
-            </h1>
-            <p class="text-base sm:text-lg text-white/90 leading-relaxed">
-              {{ $t('impressum.description') }}
-            </p>
-          </div>
-        </div>
-      </section>
+      <UiPageHero
+        :badge="$t('impressum.badge')"
+        :title="$t('impressum.title')"
+        :description="$t('impressum.description')"
+      />
   
       <!-- Main Content -->
       <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
@@ -52,9 +32,9 @@
               <div>
                 <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.organization.address') }}</div>
                 <div class="text-gray-900">
-                  Musterstraße 123<br />
-                  12345 Musterstadt<br />
-                  Deutschland
+                  {{ CONTACT_INFO.address.street }}<br />
+                  {{ CONTACT_INFO.address.city }}<br />
+                  {{ CONTACT_INFO.address.country }}
                 </div>
               </div>
   
@@ -62,8 +42,8 @@
                 <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.organization.registration') }}</div>
                 <div class="text-gray-900">
                   {{ $t('impressum.organization.registrationDetail') }}<br />
-                  {{ $t('impressum.organization.court') }}: [Amtsgericht]<br />
-                  {{ $t('impressum.organization.number') }}: VR [Nummer]
+                  {{ $t('impressum.organization.court') }}: {{ ORGANIZATION.register.court }}<br />
+                  {{ $t('impressum.organization.number') }}: {{ ORGANIZATION.register.number }}
                 </div>
               </div>
 
@@ -123,16 +103,7 @@
             </div>
   
             <div class="space-y-4 text-sm sm:text-base">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                </svg>
-                <div>
-                  <div class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{{ $t('impressum.contact.phone') }}</div>
-                  <a href="tel:+49123456789" class="text-gray-900 hover:text-teal-600 transition-colors">+49 (0) 123 456789</a>
-                </div>
-              </div>
-
+              <!-- TODO: Add a phone contact block here once the Verein has an official phone number -->
               <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>

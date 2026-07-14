@@ -1,22 +1,14 @@
 <template>
-  <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute top-20 right-0 w-72 h-72 bg-teal-100/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 left-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <!-- Section Header -->
-      <div class="text-center mb-12 sm:mb-14 lg:mb-16">
-        <div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-4 sm:mb-6">
-          {{ $t('projects.badge') }}
-        </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-          {{ $t('projects.title') }} <span class="text-teal-600">{{ $t('projects.titleHighlight') }}</span>
-        </h2>
-        <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-          {{ $t('projects.description') }}
-        </p>
-      </div>
+  <div>
+    <UiPageHero
+      :badge="$t('projects.badge')"
+      :title="$t('projects.title')"
+      :highlighted-text="$t('projects.titleHighlight')"
+      :description="$t('projects.description')"
+    />
+
+    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -167,7 +159,8 @@
         </NuxtLink>
       </div>
     </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>

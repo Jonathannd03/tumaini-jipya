@@ -1,31 +1,11 @@
 <template>
     <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <!-- Hero Section -->
-      <section class="relative bg-gradient-to-br from-teal-700 via-teal-600 to-emerald-700 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-        </div>
-        <div class="absolute top-20 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-20 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
-        
-        <div class="container mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24 relative">
-          <div class="max-w-3xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 sm:mb-8">
-              <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-              </svg>
-              <span class="text-sm font-medium">{{ $t('team.badge') }}</span>
-            </div>
-
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              {{ $t('team.title') }} <span class="text-emerald-300">{{ $t('team.titleHighlight') }}</span>
-            </h1>
-            <p class="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
-              {{ $t('team.description') }}
-            </p>
-          </div>
-        </div>
-      </section>
+      <UiPageHero
+        :badge="$t('team.badge')"
+        :title="$t('team.title')"
+        :highlighted-text="$t('team.titleHighlight')"
+        :description="$t('team.description')"
+      />
   
       <!-- Vorstand Section -->
       <section class="py-12 sm:py-16 lg:py-20">
@@ -197,11 +177,8 @@
       <!-- CTA Section -->
       <section class="py-12 sm:py-16 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-          <div class="bg-gradient-to-br from-teal-600 to-emerald-700 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
-            
-            <div class="relative">
+          <div class="bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-900 rounded-2xl p-8 sm:p-12 lg:p-16 shadow-card">
+            <div>
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
                 {{ $t('team.joinTeam') }}
               </h2>

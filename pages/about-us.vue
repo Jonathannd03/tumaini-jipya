@@ -1,10 +1,6 @@
 <template>
-  <section class="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-teal-50 rounded-full blur-3xl opacity-50"></div>
-    <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl opacity-50"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+  <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
@@ -12,9 +8,9 @@
             {{ $t('aboutUs.badge') }}
           </div>
 
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            {{ $t('aboutUs.title') }} <span class="text-teal-600">{{ $t('aboutUs.titleHighlight') }}</span>
-          </h2>
+          <h1 class="text-display-sm sm:text-display font-bold text-gray-900 mb-4 sm:mb-6">
+            {{ $t('aboutUs.title') }} <span class="text-primary-600">{{ $t('aboutUs.titleHighlight') }}</span>
+          </h1>
 
           <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
             {{ $t('aboutUs.intro1') }}
@@ -67,15 +63,15 @@
           </div>
 
           <div class="mt-8 sm:mt-10">
-            <a
-              href="/team"
-              class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold text-sm sm:text-base group"
+            <NuxtLink
+              to="/team"
+              class="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-semibold text-sm sm:text-base group"
             >
               <span>{{ $t('aboutUs.learnMore') }}</span>
               <svg class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
+            </NuxtLink>
           </div>
         </div>
 
