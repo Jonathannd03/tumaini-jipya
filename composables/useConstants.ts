@@ -45,9 +45,8 @@ export const useConstants = () => {
     fullName: 'Tumaini Jipya',
     logoPath: '/images/logo.png',
     register: {
-      // TODO: Team must fill in the actual Vereinsregister details
       court: 'Amtsgericht Duisburg',
-      number: 'VR XXXXX'
+      number: 'VR 6733'
     }
   };
 
