@@ -282,13 +282,15 @@ export default {
         title: 'Faire un don via betterplace.org',
         description: 'La principale plateforme de dons en Allemagne pour les organisations à but non lucratif – transparente et gratuite.',
         button: 'Faire un don sur betterplace.org',
-        badge: 'Recommandé'
+        badge: 'Recommandé',
+        comingSoon: 'Bientôt disponible'
       },
       paypal: {
         title: 'Faire un don via PayPal',
         description: 'Rapide et pratique avec votre compte PayPal ou carte de crédit.',
         button: 'Faire un don avec PayPal',
-        badge: 'Rapide & facile'
+        badge: 'Rapide & facile',
+        comingSoon: 'Bientôt disponible'
       }
     },
     taxNotice: {

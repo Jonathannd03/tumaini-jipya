@@ -282,13 +282,15 @@ export default {
         title: 'Über betterplace.org spenden',
         description: 'Deutschlands führende Spendenplattform für gemeinnützige Organisationen – transparent und kostenfrei.',
         button: 'Jetzt bei betterplace.org spenden',
-        badge: 'Empfohlen'
+        badge: 'Empfohlen',
+        comingSoon: 'Bald verfügbar'
       },
       paypal: {
         title: 'Über PayPal spenden',
         description: 'Schnell und bequem mit Ihrem PayPal-Konto oder per Kreditkarte.',
         button: 'Mit PayPal spenden',
-        badge: 'Schnell & einfach'
+        badge: 'Schnell & einfach',
+        comingSoon: 'Bald verfügbar'
       }
     },
     taxNotice: {

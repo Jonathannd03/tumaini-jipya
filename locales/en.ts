@@ -282,13 +282,15 @@ export default {
         title: 'Donate via betterplace.org',
         description: 'Germany\'s leading donation platform for non-profit organisations – transparent and free of charge.',
         button: 'Donate on betterplace.org',
-        badge: 'Recommended'
+        badge: 'Recommended',
+        comingSoon: 'Coming soon'
       },
       paypal: {
         title: 'Donate via PayPal',
         description: 'Quick and convenient with your PayPal account or credit card.',
         button: 'Donate with PayPal',
-        badge: 'Fast & easy'
+        badge: 'Fast & easy',
+        comingSoon: 'Coming soon'
       }
     },
     taxNotice: {

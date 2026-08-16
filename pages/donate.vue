@@ -40,17 +40,23 @@
               <p class="text-sm sm:text-base text-gray-600 mb-6 flex-grow">
                 {{ $t('donate.methods.betterplace.description') }}
               </p>
-              <a
-                :href="DONATION_LINKS.betterplace"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                </svg>
-                {{ $t('donate.methods.betterplace.button') }}
-              </a>
+              <div class="w-full flex flex-col items-center gap-2">
+                <button
+                  disabled
+                  class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-200 text-gray-400 font-semibold rounded-lg cursor-not-allowed text-sm sm:text-base"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  </svg>
+                  {{ $t('donate.methods.betterplace.button') }}
+                </button>
+                <span class="inline-flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  {{ $t('donate.methods.betterplace.comingSoon') }}
+                </span>
+              </div>
             </div>
 
             <!-- PayPal -->
@@ -71,17 +77,23 @@
               <p class="text-sm sm:text-base text-gray-600 mb-6 flex-grow">
                 {{ $t('donate.methods.paypal.description') }}
               </p>
-              <a
-                :href="DONATION_LINKS.paypal"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                </svg>
-                {{ $t('donate.methods.paypal.button') }}
-              </a>
+              <div class="w-full flex flex-col items-center gap-2">
+                <button
+                  disabled
+                  class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-200 text-gray-400 font-semibold rounded-lg cursor-not-allowed text-sm sm:text-base"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                  </svg>
+                  {{ $t('donate.methods.paypal.button') }}
+                </button>
+                <span class="inline-flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  {{ $t('donate.methods.paypal.comingSoon') }}
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -162,5 +174,4 @@
 </template>
 
 <script setup>
-const { DONATION_LINKS } = useConstants();
 </script>
