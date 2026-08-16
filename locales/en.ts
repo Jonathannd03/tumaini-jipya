@@ -275,10 +275,25 @@ export default {
     title: 'Donate to',
     titleHighlight: 'Tumaini Jipya e.V.',
     description: 'Your donation makes a real difference in people\'s lives',
-    comingSoon: {
-      title: 'Online donations coming soon',
-      description: 'We are working hard to soon offer you a simple and secure way to donate online.',
-      availableSoon: 'Available soon'
+    methods: {
+      title: 'Donate now',
+      description: 'Choose your preferred payment method – secure, simple, and direct.',
+      betterplace: {
+        title: 'Donate via betterplace.org',
+        description: 'Germany\'s leading donation platform for non-profit organisations – transparent and free of charge.',
+        button: 'Donate on betterplace.org',
+        badge: 'Recommended'
+      },
+      paypal: {
+        title: 'Donate via PayPal',
+        description: 'Quick and convenient with your PayPal account or credit card.',
+        button: 'Donate with PayPal',
+        badge: 'Fast & easy'
+      }
+    },
+    taxNotice: {
+      title: 'Note on donation receipts',
+      text: 'Tumaini Jipya e.V. is a legally registered association (VR 6733, Amtsgericht Duisburg). Our application for charitable status (Gemeinnützigkeit) with the tax office is underway. Once approved, we will issue tax-deductible donation receipts (Zuwendungsbestätigungen) upon request.'
     },
     impact: {
       title: 'Your Donation Makes a Difference',
@@ -288,8 +303,8 @@ export default {
       education: 'Educational projects and language support for children'
     },
     newsletter: {
-      title: 'Stay Informed',
-      description: 'Be the first to know when the online donation feature is available and receive updates about our projects',
+      title: 'Have questions?',
+      description: 'We\'re happy to answer your questions about donations, membership, and our projects personally.',
       contactUs: 'Contact us'
     }
   },

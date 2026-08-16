@@ -275,10 +275,25 @@ export default {
     title: 'Spenden für',
     titleHighlight: 'Tumaini Jipya e.V.',
     description: 'Ihre Spende macht einen echten Unterschied im Leben der Menschen',
-    comingSoon: {
-      title: 'Online-Spenden bald verfügbar',
-      description: 'Wir arbeiten mit Hochdruck daran, Ihnen bald eine einfache und sichere Möglichkeit zu bieten, online zu spenden.',
-      availableSoon: 'In Kürze verfügbar'
+    methods: {
+      title: 'Jetzt spenden',
+      description: 'Wählen Sie Ihre bevorzugte Zahlungsmethode – sicher, einfach und direkt.',
+      betterplace: {
+        title: 'Über betterplace.org spenden',
+        description: 'Deutschlands führende Spendenplattform für gemeinnützige Organisationen – transparent und kostenfrei.',
+        button: 'Jetzt bei betterplace.org spenden',
+        badge: 'Empfohlen'
+      },
+      paypal: {
+        title: 'Über PayPal spenden',
+        description: 'Schnell und bequem mit Ihrem PayPal-Konto oder per Kreditkarte.',
+        button: 'Mit PayPal spenden',
+        badge: 'Schnell & einfach'
+      }
+    },
+    taxNotice: {
+      title: 'Hinweis zur Spendenquittung',
+      text: 'Tumaini Jipya e.V. ist als eingetragener Verein (VR 6733, Amtsgericht Duisburg) rechtlich anerkannt. Der Antrag auf Gemeinnützigkeit beim Finanzamt ist gestellt. Sobald der Freistellungsbescheid vorliegt, stellen wir Ihnen auf Wunsch eine steuerlich absetzbare Zuwendungsbestätigung aus.'
     },
     impact: {
       title: 'Ihre Spende bewirkt Großes',
@@ -288,8 +303,8 @@ export default {
       education: 'Bildungsprojekte und Sprachförderung für Kinder'
     },
     newsletter: {
-      title: 'Bleiben Sie informiert',
-      description: 'Erfahren Sie als Erste/r, wenn die Online-Spendenfunktion verfügbar ist und erhalten Sie Updates zu unseren Projekten',
+      title: 'Noch Fragen?',
+      description: 'Wir beantworten Ihre Fragen rund um Spenden, Mitgliedschaft und unsere Projekte gerne persönlich.',
       contactUs: 'Kontaktieren Sie uns'
     }
   },

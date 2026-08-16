@@ -50,6 +50,13 @@ export const useConstants = () => {
     }
   };
 
+  const DONATION_LINKS = {
+    // TODO: Replace with actual betterplace.org project URL once created
+    betterplace: 'https://www.betterplace.org',
+    // TODO: Replace business value with the Verein's PayPal account email
+    paypal: 'https://www.paypal.com/donate?business=PAYPAL_EMAIL_PLACEHOLDER&item_name=Tumaini+Jipya+e.V.&currency_code=EUR'
+  };
+
   const BOARD_MEMBERS = {
     chair: 'Jonathan Ndinga',
     viceChair: 'Julius Kadewa',
@@ -85,6 +92,7 @@ export const useConstants = () => {
     SOCIAL_LINKS,
     CONTACT_INFO,
     ORGANIZATION,
+    DONATION_LINKS,
     BOARD_MEMBERS,
     MISSION_AREAS
   };
