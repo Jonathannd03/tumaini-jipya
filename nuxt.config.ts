@@ -2,7 +2,7 @@
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-09-12",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
 
   // Fonts are downloaded at build time and self-hosted (GDPR: no request to Google at runtime)

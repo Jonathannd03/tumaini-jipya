@@ -59,6 +59,12 @@ export default {
       description: 'Einblicke in unsere Arbeit in Duisburg und unseren Projektregionen.',
       comingSoon: 'Demnächst'
     },
+    project: {
+      badge: 'Aktuell aktiv',
+      title: 'Unser erstes Projekt ist gestartet',
+      description: 'Wir helfen geflüchteten Kindern in Goma. Jede Spende kommt direkt vor Ort an.',
+      viewDetails: 'Zum Projekt'
+    },
     contactStrip: {
       title: 'Bleiben Sie mit uns in Verbindung',
       description: 'Erfahren Sie, was unsere Projekte bewirken, und begleiten Sie uns auf dem Weg. Wir freuen uns auf Sie.',

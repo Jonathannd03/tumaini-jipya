@@ -3,6 +3,7 @@
     <HomeHero />
     <HomeImpactStats />
     <HomeMissionCards />
+    <HomeProjectTeaser />
     <HomeStorySection />
     <HomeNewsTeaser />
     <HomeContactStrip />
@@ -11,7 +12,7 @@
         :title="$t('home.finalCta.title')"
         :description="$t('home.finalCta.description')"
         :primary-text="$t('home.finalCta.donate')"
-        primary-link="/donate"
+        primary-link="/donate#spenden"
         :secondary-text="$t('home.finalCta.membership')"
         secondary-link="/membership"
       >

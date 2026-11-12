@@ -30,7 +30,7 @@
 
         <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
           <NuxtLink
-            to="/donate"
+            to="/donate#spenden"
             class="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-400 px-8 py-4 text-base font-semibold text-accent-950 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-300 hover:shadow-xl sm:text-lg"
           >
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

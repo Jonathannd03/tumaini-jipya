@@ -11,7 +11,7 @@
       <div class="max-w-4xl mx-auto">
 
         <!-- Donation Methods -->
-        <div class="mb-12 sm:mb-16">
+        <div id="spenden" class="mb-12 sm:mb-16">
           <div class="text-center mb-10 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               {{ $t('donate.methods.title') }}

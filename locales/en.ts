@@ -59,6 +59,12 @@ export default {
       description: 'Insights into our work in Duisburg and our project regions.',
       comingSoon: 'Coming soon'
     },
+    project: {
+      badge: 'Now active',
+      title: 'Our first project has launched',
+      description: 'We are helping refugee children in Goma. Every donation reaches them directly.',
+      viewDetails: 'View project'
+    },
     contactStrip: {
       title: 'Stay in touch with us',
       description: 'Find out what our projects achieve and join us on the journey. We look forward to hearing from you.',

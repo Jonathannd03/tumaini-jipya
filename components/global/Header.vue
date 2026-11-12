@@ -43,7 +43,7 @@
 
           <!-- Donate Button (warm accent) -->
           <NuxtLink
-            to="/donate"
+            to="/donate#spenden"
             class="inline-flex items-center gap-1.5 rounded-xl bg-accent-400 p-2 font-semibold text-accent-950 shadow-md transition-all duration-300 hover:bg-accent-300 hover:shadow-lg sm:gap-2 sm:px-4 sm:py-2 lg:px-5 lg:py-2.5"
             :aria-label="$t('nav.donate')"
           >
@@ -132,7 +132,7 @@
 
           <div class="mt-6 space-y-3 border-t border-gray-100 pt-6">
             <NuxtLink
-              to="/donate"
+              to="/donate#spenden"
               class="flex w-full items-center justify-center gap-2 rounded-xl bg-accent-400 px-4 py-4 text-lg font-semibold text-accent-950 shadow-md transition-all duration-300 hover:bg-accent-300"
               @click="closeMobileMenu"
             >
