@@ -47,12 +47,12 @@ export const useConstants = () => {
     register: {
       court: 'Amtsgericht Duisburg',
       number: 'VR 6733'
-    }
+    },
+    taxNumber: '109/5841/1420'
   };
 
   const DONATION_LINKS = {
-    // TODO: Replace with actual betterplace.org project URL once created
-    betterplace: 'https://www.betterplace.org',
+    betterplace: 'https://www.betterplace.org/de/projects/189226',
     // TODO: Replace business value with the Verein's PayPal account email
     paypal: 'https://www.paypal.com/donate?business=PAYPAL_EMAIL_PLACEHOLDER&item_name=Tumaini+Jipya+e.V.&currency_code=EUR'
   };

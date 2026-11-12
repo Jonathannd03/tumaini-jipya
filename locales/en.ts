@@ -148,10 +148,10 @@ export default {
     fullyTransparent: '100% Transparent'
   },
   projects: {
-    badge: 'Current Projects',
+    badge: 'Our Projects',
     title: 'Where we',
     titleHighlight: 'help',
-    description: 'These are the first projects we are planning. Every contribution brings us closer to launch.',
+    description: 'Our first project is active, with more in planning. Every donation brings us closer to our goal.',
     inPlanning: 'In Planning',
     progress: 'Progress',
     beneficiaries: 'Beneficiaries',
@@ -161,6 +161,31 @@ export default {
     comingSoon: 'Coming Soon',
     interestedText: 'Interested in our projects? Contact us for more information.',
     contactUs: 'Contact Us',
+    plannedTitle: 'More planned projects',
+    activeProject: {
+      badge: 'Now active',
+      location: 'Goma, Democratic Republic of Congo',
+      title: 'Emergency Aid for Refugee Children in Goma: Food & Clothing',
+      intro: 'Thousands of children in the refugee camps around Goma are suffering from extreme hardship. With our first project we secure survival: we fund nutritious food and protective clothing directly on the ground. Every euro helps.',
+      problem: {
+        title: 'The Problem',
+        text: 'The humanitarian situation in and around Goma in eastern DRC is catastrophic. Ongoing conflicts have displaced hundreds of thousands of families. In makeshift camps, children suffer most: severe malnutrition, lack of medical care, and inadequate clothing.'
+      },
+      who: {
+        title: 'Who we help',
+        text: 'Our project is specifically aimed at refugee and displaced children in the camps around Goma. We ensure they receive at least one nutritious meal per day and are protected from illness and weather by clean, sturdy clothing.'
+      },
+      approach: {
+        title: 'Our Approach',
+        step1: 'Local procurement of staple foods (rice, beans, maize flour) and clothing on site, saving logistics costs and strengthening the local economy.',
+        step2: 'Direct distribution without intermediaries through trusted local partners in the camps.',
+        step3: 'Complete documentation of every distribution in compliance with German non-profit law requirements.'
+      },
+      goalLabel: 'Fundraising goal',
+      goal: '€4,600',
+      donateButton: 'Donate now on betterplace.org',
+      moreInfo: 'More on betterplace.org'
+    },
     educationCenter: {
       title: 'Education Center for Children',
       description: 'Building an education center with tutoring and language support for 150 refugee children.'
@@ -277,12 +302,12 @@ export default {
     description: 'Your donation makes a real difference in people\'s lives',
     methods: {
       title: 'Donate now',
-      description: 'Choose your preferred payment method – secure, simple, and direct.',
+      description: 'Choose your preferred payment method: secure, simple, and direct.',
       betterplace: {
         title: 'Donate via betterplace.org',
-        description: 'Germany\'s leading donation platform for non-profit organisations – transparent and free of charge.',
+        description: 'Germany\'s leading donation platform for non-profit organisations, transparent and free of charge.',
         button: 'Donate on betterplace.org',
-        badge: 'Recommended',
+        badge: 'Now live',
         comingSoon: 'Coming soon'
       },
       paypal: {
@@ -294,8 +319,8 @@ export default {
       }
     },
     taxNotice: {
-      title: 'Note on donation receipts',
-      text: 'Tumaini Jipya e.V. is a legally registered association (VR 6733, Amtsgericht Duisburg). Our application for charitable status (Gemeinnützigkeit) with the tax office is underway. Once approved, we will issue tax-deductible donation receipts (Zuwendungsbestätigungen) upon request.'
+      title: 'Your donation is tax-deductible',
+      text: 'Tumaini Jipya e.V. has been officially recognised as a non-profit organisation by Finanzamt Duisburg-Süd (tax number: 109/5841/1420). You will receive your donation receipt directly from betterplace (betterplace.org gGmbH).'
     },
     impact: {
       title: 'Your Donation Makes a Difference',
@@ -358,7 +383,7 @@ export default {
       court: 'Registration court',
       number: 'Registration number',
       nonprofit: 'Non-profit status',
-      nonprofitDetail: 'Recognized as non-profit according to the tax exemption notice from the tax office'
+      nonprofitDetail: 'Recognised as non-profit by Finanzamt Duisburg-Süd (tax number: 109/5841/1420)'
     },
     board: {
       title: 'Authorized Board',

@@ -148,10 +148,10 @@ export default {
     fullyTransparent: '100% Transparent'
   },
   projects: {
-    badge: 'Aktuelle Projekte',
+    badge: 'Unsere Projekte',
     title: 'Wo wir',
     titleHighlight: 'helfen',
-    description: 'Diese Projekte planen wir als Erstes. Jede Unterstützung bringt uns dem Start näher.',
+    description: 'Unser erstes Projekt ist aktiv. Weitere sind in Planung. Jede Spende bringt uns näher an unser Ziel.',
     inPlanning: 'In Planung',
     progress: 'Fortschritt',
     beneficiaries: 'Begünstigte',
@@ -161,6 +161,31 @@ export default {
     comingSoon: 'Demnächst verfügbar',
     interestedText: 'Interessiert an unseren Projekten? Kontaktieren Sie uns für weitere Informationen.',
     contactUs: 'Kontaktieren Sie uns',
+    plannedTitle: 'Weitere geplante Projekte',
+    activeProject: {
+      badge: 'Jetzt aktiv',
+      location: 'Goma, Demokratische Republik Kongo',
+      title: 'Nothilfe für geflüchtete Kinder in Goma: Nahrung & Kleidung',
+      intro: 'In den Flüchtlingslagern rund um Goma leiden tausende Kinder unter extremer Not. Mit unserem ersten Projekt sichern wir das Überleben: Wir finanzieren nahrhafte Lebensmittel und schützende Kleidung direkt vor Ort. Jeder Euro hilft.',
+      problem: {
+        title: 'Das Problem',
+        text: 'Die humanitäre Lage in und um Goma im Osten der Demokratischen Republik Kongo ist katastrophal. Durch anhaltende Konflikte wurden hunderttausende Familien vertrieben. In den provisorischen Lagern leiden besonders die Kinder unter schwerer Mangelernährung, fehlender medizinischer Versorgung und unzureichender Bekleidung.'
+      },
+      who: {
+        title: 'Wem wir helfen',
+        text: 'Unser Projekt richtet sich gezielt an geflüchtete und vertriebene Kinder in den Camps rund um Goma. Wir stellen sicher, dass sie mindestens eine nahrhafte Mahlzeit am Tag erhalten und durch saubere, feste Kleidung vor Krankheiten und Witterung geschützt sind.'
+      },
+      approach: {
+        title: 'Unser Vorgehen',
+        step1: 'Lokaler Einkauf von Grundnahrungsmitteln (Reis, Bohnen, Maismehl) und Kleidung direkt vor Ort. Das spart Logistikkosten und stärkt die lokale Wirtschaft.',
+        step2: 'Direkte Verteilung ohne Zwischenhändler durch vertrauenswürdige Partner in den Lagern.',
+        step3: 'Lückenlose Dokumentation jeder Verteilung gemäß den Vorgaben des deutschen Gemeinnützigkeitsrechts.'
+      },
+      goalLabel: 'Spendenziel',
+      goal: '4.600 €',
+      donateButton: 'Jetzt bei betterplace.org spenden',
+      moreInfo: 'Mehr auf betterplace.org'
+    },
     educationCenter: {
       title: 'Bildungszentrum für Kinder',
       description: 'Aufbau eines Bildungszentrums mit Nachhilfe und Sprachförderung für 150 geflüchtete Kinder.'
@@ -277,12 +302,12 @@ export default {
     description: 'Ihre Spende macht einen echten Unterschied im Leben der Menschen',
     methods: {
       title: 'Jetzt spenden',
-      description: 'Wählen Sie Ihre bevorzugte Zahlungsmethode – sicher, einfach und direkt.',
+      description: 'Wählen Sie Ihre bevorzugte Zahlungsmethode: sicher, einfach und direkt.',
       betterplace: {
         title: 'Über betterplace.org spenden',
-        description: 'Deutschlands führende Spendenplattform für gemeinnützige Organisationen – transparent und kostenfrei.',
+        description: 'Deutschlands führende Spendenplattform für gemeinnützige Organisationen, transparent und kostenfrei.',
         button: 'Jetzt bei betterplace.org spenden',
-        badge: 'Empfohlen',
+        badge: 'Jetzt aktiv',
         comingSoon: 'Bald verfügbar'
       },
       paypal: {
@@ -294,8 +319,8 @@ export default {
       }
     },
     taxNotice: {
-      title: 'Hinweis zur Spendenquittung',
-      text: 'Tumaini Jipya e.V. ist als eingetragener Verein (VR 6733, Amtsgericht Duisburg) rechtlich anerkannt. Der Antrag auf Gemeinnützigkeit beim Finanzamt ist gestellt. Sobald der Freistellungsbescheid vorliegt, stellen wir Ihnen auf Wunsch eine steuerlich absetzbare Zuwendungsbestätigung aus.'
+      title: 'Ihre Spende ist steuerlich absetzbar',
+      text: 'Tumaini Jipya e.V. ist vom Finanzamt Duisburg-Süd als gemeinnützig anerkannt (Steuernummer: 109/5841/1420). Sie erhalten Ihre Spendenbescheinigung direkt von betterplace (betterplace.org gGmbH).'
     },
     impact: {
       title: 'Ihre Spende bewirkt Großes',
@@ -358,7 +383,7 @@ export default {
       court: 'Registergericht',
       number: 'Registernummer',
       nonprofit: 'Gemeinnützigkeit',
-      nonprofitDetail: 'Als gemeinnützig anerkannt gemäß Freistellungsbescheid des Finanzamts'
+      nonprofitDetail: 'Als gemeinnützig anerkannt gemäß Bestätigung des Finanzamts Duisburg-Süd (Steuernummer: 109/5841/1420)'
     },
     board: {
       title: 'Vertretungsberechtigter Vorstand',
