@@ -148,10 +148,10 @@ export default {
     fullyTransparent: '100% Transparent'
   },
   projects: {
-    badge: 'Projets en cours',
+    badge: 'Nos projets',
     title: 'Où nous',
     titleHighlight: 'aidons',
-    description: 'Voici les premiers projets que nous préparons. Chaque soutien nous rapproche du lancement.',
+    description: 'Notre premier projet est actif, et d\'autres sont en cours de planification. Chaque don nous rapproche de notre objectif.',
     inPlanning: 'En planification',
     progress: 'Progrès',
     beneficiaries: 'Bénéficiaires',
@@ -161,6 +161,31 @@ export default {
     comingSoon: 'Bientôt disponible',
     interestedText: 'Intéressé par nos projets ? Contactez-nous pour plus d\'informations.',
     contactUs: 'Contactez-nous',
+    plannedTitle: 'Autres projets en préparation',
+    activeProject: {
+      badge: 'Maintenant actif',
+      location: 'Goma, République Démocratique du Congo',
+      title: 'Aide d\'urgence pour enfants réfugiés à Goma : Nourriture & Vêtements',
+      intro: 'Des milliers d\'enfants dans les camps de réfugiés autour de Goma souffrent d\'une misère extrême. Avec notre premier projet, nous assurons leur survie : nous finançons des aliments nutritifs et des vêtements protecteurs directement sur place. Chaque euro aide.',
+      problem: {
+        title: 'Le problème',
+        text: 'La situation humanitaire dans et autour de Goma, dans l\'est de la RDC, est catastrophique. Des conflits persistants ont déplacé des centaines de milliers de familles. Dans les camps précaires, les enfants sont les plus touchés : malnutrition sévère, absence de soins médicaux et vêtements insuffisants.'
+      },
+      who: {
+        title: 'Qui nous aidons',
+        text: 'Notre projet cible spécifiquement les enfants réfugiés et déplacés dans les camps autour de Goma. Nous veillons à ce qu\'ils reçoivent au moins un repas nutritif par jour et soient protégés des maladies et des intempéries par des vêtements propres et solides.'
+      },
+      approach: {
+        title: 'Notre approche',
+        step1: 'Achat local de denrées de base (riz, haricots, farine de maïs) et de vêtements sur place, ce qui réduit les coûts logistiques et renforce l\'économie locale.',
+        step2: 'Distribution directe sans intermédiaires via des partenaires locaux de confiance dans les camps.',
+        step3: 'Documentation complète de chaque distribution conformément aux exigences du droit associatif allemand.'
+      },
+      goalLabel: 'Objectif de collecte',
+      goal: '4 600 €',
+      donateButton: 'Faire un don sur betterplace.org',
+      moreInfo: 'Plus sur betterplace.org'
+    },
     educationCenter: {
       title: 'Centre éducatif pour enfants',
       description: 'Construction d\'un centre éducatif avec tutorat et soutien linguistique pour 150 enfants réfugiés.'
@@ -277,12 +302,12 @@ export default {
     description: 'Votre don fait une vraie différence dans la vie des gens',
     methods: {
       title: 'Faire un don maintenant',
-      description: 'Choisissez votre mode de paiement préféré – sécurisé, simple et direct.',
+      description: 'Choisissez votre mode de paiement préféré : sécurisé, simple et direct.',
       betterplace: {
         title: 'Faire un don via betterplace.org',
-        description: 'La principale plateforme de dons en Allemagne pour les organisations à but non lucratif – transparente et gratuite.',
+        description: 'La principale plateforme de dons en Allemagne pour les organisations à but non lucratif, transparente et gratuite.',
         button: 'Faire un don sur betterplace.org',
-        badge: 'Recommandé',
+        badge: 'Maintenant actif',
         comingSoon: 'Bientôt disponible'
       },
       paypal: {
@@ -294,8 +319,8 @@ export default {
       }
     },
     taxNotice: {
-      title: 'Note sur les reçus de dons',
-      text: 'Tumaini Jipya e.V. est une association légalement enregistrée (VR 6733, Amtsgericht Duisburg). Notre demande de statut d\'utilité publique (Gemeinnützigkeit) auprès des autorités fiscales est en cours. Une fois approuvée, nous délivrerons des reçus fiscaux sur demande.'
+      title: 'Votre don est déductible des impôts',
+      text: 'Tumaini Jipya e.V. a été officiellement reconnu comme organisation à but non lucratif par le Finanzamt Duisburg-Süd (numéro fiscal : 109/5841/1420). Vous recevrez votre reçu de don directement de betterplace (betterplace.org gGmbH).'
     },
     impact: {
       title: 'Votre don fait la différence',
@@ -358,7 +383,7 @@ export default {
       court: 'Tribunal d\'enregistrement',
       number: 'Numéro d\'enregistrement',
       nonprofit: 'Statut à but non lucratif',
-      nonprofitDetail: 'Reconnu comme étant à but non lucratif selon l\'avis d\'exonération fiscale du bureau des impôts'
+      nonprofitDetail: 'Reconnu comme organisation à but non lucratif par le Finanzamt Duisburg-Süd (numéro fiscal : 109/5841/1420)'
     },
     board: {
       title: 'Conseil d\'administration autorisé',
